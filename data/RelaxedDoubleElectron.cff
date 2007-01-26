@@ -10,7 +10,7 @@
  include "HLTrigger/Egamma/data/hltRelaxedDoubleElectronTrackIsolFilter.cfi"
 
 
-  module relaxedDoublePresc = HLTPrescaler {
+  module relaxedDoubleElectronPresc = HLTPrescaler {
          bool   makeFilterObject = true
          uint32 prescaleFactor = 1
          uint32 eventOffset    = 0
@@ -19,12 +19,12 @@
 
 
   sequence relaxedDoubleElectron = {
-                                    #l1seedRelaxedDouble,
+                                    l1seedRelaxedDouble,
                                     ecalClusteringSequence, hltRecoEcalRelaxedDoubleCandidate,
                                     hltRelaxedDoubleElectronEtFilter, 
                                     hltRelaxedDoubleElectronHcalIsol, hltRelaxedDoubleElectronHcalIsolFilter,
 	                            pixelMatchElectronSequenceForHLT,hltRelaxedDoubleElectronPixelMatchFilter,
                                     pixelMatchElectronTrackingSequenceForHLT,
                                     ckftracks,hltRelaxedDoubleElectronTrackIsol,hltRelaxedDoubleElectronTrackIsolFilter,
-                                    relaxedDoublePresc
+                                    relaxedDoubleElectronPresc
                                 }
