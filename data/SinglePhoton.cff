@@ -3,10 +3,10 @@
  include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonHcalIsol.cfi"
  include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonTrackIsol.cfi"
 
- include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonEtFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonEcalIsolFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonHcalIsolFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonTrackIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltSinglePhotonEtFilter.cfi"
+ include "HLTrigger/Egamma/data/hltSinglePhotonEcalIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltSinglePhotonHcalIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltSinglePhotonTrackIsolFilter.cfi"
 
 
   module singlePhotonPresc = HLTPrescaler {

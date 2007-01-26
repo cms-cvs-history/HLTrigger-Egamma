@@ -3,11 +3,11 @@
  include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoublePhotonHcalIsol.cfi"
  include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoublePhotonTrackIsol.cfi"
 
- include "HLTrigger/HLTstaging/data/egamma/hltRelaxedDoublePhotonEtFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltRelaxedDoublePhotonEcalIsolFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltRelaxedDoublePhotonHcalIsolFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltRelaxedDoublePhotonTrackIsolFilter.cfi"
- include "HLTrigger/HLTstaging/data/egamma/hltRelaxedDoublePhotonDoubleEtFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoublePhotonEtFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoublePhotonEcalIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoublePhotonHcalIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoublePhotonTrackIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoublePhotonDoubleEtFilter.cfi"
 
   module relaxedDoublePhotonPresc = HLTPrescaler {
          bool   makeFilterObject = true
