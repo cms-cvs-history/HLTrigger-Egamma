@@ -1,0 +1,9 @@
+#
+# producer for hltDoublePhotonTrackIsolFilter
+#
+module hltDoublePhotonTrackIsolFilter = HLTPhotonTrackIsolFilter {
+      InputTag candTag = hltDoublePhotonHcalIsolFilter
+      InputTag isoTag  = hltDoublePhotonTrackIsol
+      double numtrackisolcut = 3
+      int32 ncandcut = 2
+}

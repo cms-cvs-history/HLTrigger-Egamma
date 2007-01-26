@@ -1,0 +1,10 @@
+#
+# producer for hltDoubleElectronHcalIsolFilter
+#
+module hltDoubleElectronHcalIsolFilter = HLTEgammaHcalIsolFilter {
+      InputTag candTag = hltDoubleElectronEtFilter
+      InputTag isoTag  = hltDoubleElectronHcalIsol
+      double hcalisolbarrelcut = 9.
+      double hcalisolendcapcut = 9.
+      int32 ncandcut = 2
+}

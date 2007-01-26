@@ -1,0 +1,6 @@
+//ELECTRONS
+module hltSingleElectronEtFilter = HLTEgammaEtFilter {
+      InputTag inputTag = hltRecoEcalSingleCandidate
+      double etcut = 26.0
+      int32  ncandcut = 1
+}

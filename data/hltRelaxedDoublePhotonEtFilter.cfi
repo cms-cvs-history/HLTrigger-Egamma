@@ -1,0 +1,6 @@
+//PHOTONS
+module hltRelaxedDoublePhotonEtFilter = HLTEgammaEtFilter {
+      InputTag inputTag = hltRecoEcalRelaxedDoubleCandidate
+      double etcut = 20.0
+      int32  ncandcut = 2
+}

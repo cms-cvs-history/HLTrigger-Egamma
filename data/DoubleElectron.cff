@@ -1,0 +1,28 @@
+
+ include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalDoubleCandidate.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltDoubleElectronHcalIsol.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltDoubleElectronTrackIsol.cfi"
+ include "HLTrigger/Egamma/data/hltDoubleElectronEtFilter.cfi"
+ include "HLTrigger/Egamma/data/hltDoubleElectronHcalIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltDoubleElectronPixelMatchFilter.cfi"
+ include "HLTrigger/Egamma/data/hltDoubleElectronTrackIsolFilter.cfi"
+
+  module doubleElectronPresc = HLTPrescaler {
+         bool   makeFilterObject = true
+         uint32 prescaleFactor = 1
+         uint32 eventOffset    = 0
+  }
+
+
+
+
+  sequence doubleElectron = {
+                              l1seedDouble,
+                              ecalClusteringSequence, hltRecoEcalDoubleCandidate,
+                              hltDoubleElectronEtFilter, 
+                              hltDoubleElectronHcalIsol, hltDoubleElectronHcalIsolFilter,
+	                      pixelMatchElectronSequenceForHLT,hltDoubleElectronPixelMatchFilter,
+                              pixelMatchElectronTrackingSequenceForHLT,
+                              ckftracks,hltDoubleElectronTrackIsol,hltDoubleElectronTrackIsolFilter,
+                              doubleElectronPresc
+                         }

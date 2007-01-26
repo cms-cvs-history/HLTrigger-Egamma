@@ -1,0 +1,12 @@
+#
+# producer for hltDoubleElectronPixelMatchFilter
+#
+module hltDoubleElectronPixelMatchFilter = HLTElectronPixelMatchFilter {
+
+      InputTag candTag                = hltDoubleElectronHcalIsolFilter
+      InputTag pixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
+      InputTag pixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
+      double   npixelmatchcut         = 1
+      int32    ncandcut               = 2
+}
+

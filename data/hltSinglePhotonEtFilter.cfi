@@ -1,0 +1,6 @@
+//PHOTONS
+module hltSinglePhotonEtFilter = HLTEgammaEtFilter {
+      InputTag inputTag = hltRecoEcalSingleCandidate
+      double etcut = 80.0
+      int32  ncandcut = 1
+}

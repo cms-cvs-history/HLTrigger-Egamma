@@ -1,0 +1,30 @@
+
+ include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalRelaxedDoubleCandidate.cfi"
+
+ include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoubleElectronHcalIsol.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoubleElectronTrackIsol.cfi"
+
+ include "HLTrigger/Egamma/data/hltRelaxedDoubleElectronEtFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoubleElectronHcalIsolFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoubleElectronPixelMatchFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoubleElectronTrackIsolFilter.cfi"
+
+
+  module relaxedDoublePresc = HLTPrescaler {
+         bool   makeFilterObject = true
+         uint32 prescaleFactor = 1
+         uint32 eventOffset    = 0
+  }
+
+
+
+  sequence relaxedDoubleElectron = {
+                                    #l1seedRelaxedDouble,
+                                    ecalClusteringSequence, hltRecoEcalRelaxedDoubleCandidate,
+                                    hltRelaxedDoubleElectronEtFilter, 
+                                    hltRelaxedDoubleElectronHcalIsol, hltRelaxedDoubleElectronHcalIsolFilter,
+	                            pixelMatchElectronSequenceForHLT,hltRelaxedDoubleElectronPixelMatchFilter,
+                                    pixelMatchElectronTrackingSequenceForHLT,
+                                    ckftracks,hltRelaxedDoubleElectronTrackIsol,hltRelaxedDoubleElectronTrackIsolFilter,
+                                    relaxedDoublePresc
+                                }

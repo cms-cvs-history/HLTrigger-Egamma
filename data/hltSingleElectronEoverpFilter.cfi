@@ -1,0 +1,9 @@
+#
+# producer for hltSingleElectronEoverpFilter
+#
+module hltSingleElectronEoverpFilter = HLTElectronEoverpFilter {
+      InputTag candTag = hltSingleElectronTrackIsolFilter
+      double eoverpbarrelcut = 1.5
+      double eoverpendcapcut = 2.45
+      int32 ncandcut = 1
+}

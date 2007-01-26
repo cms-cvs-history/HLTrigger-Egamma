@@ -1,0 +1,26 @@
+
+ include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonEcalIsol.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonHcalIsol.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonTrackIsol.cfi"
+
+ include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonEtFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonEcalIsolFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonHcalIsolFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltSinglePhotonTrackIsolFilter.cfi"
+
+
+  module singlePhotonPresc = HLTPrescaler {
+         bool   makeFilterObject = true
+         uint32 prescaleFactor = 1
+         uint32 eventOffset    = 0
+  }
+
+
+
+  sequence singlePhoton = {l1seedSingle,ecalClusteringSequence,hltRecoEcalSingleCandidate,
+                           hltSinglePhotonEtFilter, 
+	                   hltSinglePhotonEcalIsol, hltSinglePhotonEcalIsolFilter,
+                           hltSinglePhotonHcalIsol, hltSinglePhotonHcalIsolFilter,
+  	                   ckftracks,hltSinglePhotonTrackIsol,hltSinglePhotonTrackIsolFilter,
+                           singlePhotonPresc
+	                   }

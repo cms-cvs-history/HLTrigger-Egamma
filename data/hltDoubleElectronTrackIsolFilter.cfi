@@ -1,0 +1,9 @@
+#
+# producer for hltDoubleElectronTrackIsolFilter
+#
+module hltDoubleElectronTrackIsolFilter = HLTElectronTrackIsolFilter {
+      InputTag candTag      = hltDoubleElectronPixelMatchFilter
+      InputTag isoTag       = hltDoubleElectronTrackIsol
+      double pttrackisolcut = 0.4
+      int32 ncandcut         = 2
+}

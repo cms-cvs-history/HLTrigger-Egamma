@@ -1,0 +1,27 @@
+
+
+ include "RecoEgamma/EgammaHLTProducers/data/hltDoublePhotonEcalIsol.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltDoublePhotonHcalIsol.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltDoublePhotonTrackIsol.cfi"
+
+ include "HLTrigger/HLTstaging/data/egamma/hltDoublePhotonEtFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltDoublePhotonEcalIsolFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltDoublePhotonHcalIsolFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltDoublePhotonTrackIsolFilter.cfi"
+ include "HLTrigger/HLTstaging/data/egamma/hltDoublePhotonDoubleEtFilter.cfi"
+
+
+  module doublePhotonPresc = HLTPrescaler {
+         bool   makeFilterObject = true
+         uint32 prescaleFactor = 1
+         uint32 eventOffset    = 0
+  }
+
+  sequence doublePhoton = {l1seedDouble,ecalClusteringSequence,hltRecoEcalDoubleCandidate,
+                           hltDoublePhotonEtFilter, 
+	                   hltDoublePhotonEcalIsol, hltDoublePhotonEcalIsolFilter,
+                           hltDoublePhotonHcalIsol, hltDoublePhotonHcalIsolFilter,
+  	                   ckftracks,hltDoublePhotonTrackIsol,hltDoublePhotonTrackIsolFilter,
+                           hltDoublePhotonDoubleEtFilter,
+                           doublePhotonPresc
+	                  }

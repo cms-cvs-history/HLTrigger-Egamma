@@ -1,0 +1,12 @@
+#
+# producer for hltRelaxedDoubleElectronPixelMatchFilter
+#
+module hltRelaxedDoubleElectronPixelMatchFilter = HLTElectronPixelMatchFilter {
+
+      InputTag candTag                = hltRelaxedDoubleElectronHcalIsolFilter
+      InputTag pixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
+      InputTag pixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
+      double   npixelmatchcut         = 1
+      int32    ncandcut               = 2
+}
+

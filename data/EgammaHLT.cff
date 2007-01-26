@@ -1,0 +1,48 @@
+
+
+ include "RecoEcal/EgammaClusterProducers/data/ecalClusteringSequence.cff"
+
+ include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalSingleCandidate.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalDoubleCandidate.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalRelaxedDoubleCandidate.cfi"
+
+ include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronSequenceForHLT.cff"
+ include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronTrackingSequenceForHLT.cff"
+ # tracker: defines ckftracks and rstracks
+ include "Configuration/Examples/data/RecoTracker.cff"
+
+
+
+ include "L1Trigger/L1ExtraFromDigis/data/l1extra.cff"
+ path dol1extra = {l1emulator,l1extra}	
+
+  module l1seedSingle = HLTLevel1Seed {
+         vuint32 L1Seeds = {0}
+         bool andOr = true
+         bool byName= false
+         InputTag L1ExtraCollections = l1extraParticles
+         InputTag L1ExtraParticleMap = l1extraParticleMap
+         InputTag L1GTReadoutRecord  = l1extraParticleMap
+        }
+
+
+  module l1seedDouble = HLTLevel1Seed {
+         vuint32 L1Seeds = {1}
+         bool andOr = true
+         bool byName= false
+         InputTag L1ExtraCollections = l1extraParticles
+         InputTag L1ExtraParticleMap = l1extraParticleMap
+         InputTag L1GTReadoutRecord  = l1extraParticleMap
+        }
+
+
+  module l1seedRelaxedDouble = HLTLevel1Seed {
+         vuint32 L1Seeds = {3}
+         bool andOr = true
+         bool byName= false
+         InputTag L1ExtraCollections = l1extraParticles
+         InputTag L1ExtraParticleMap = l1extraParticleMap
+         InputTag L1GTReadoutRecord  = l1extraParticleMap
+        }
+
+
