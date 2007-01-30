@@ -17,7 +17,9 @@
 
   sequence singleElectron = {
                              l1seedSingle,
-                             ecalClusteringSequence, hltRecoEcalSingleCandidate,
+                             ecalClusteringSequence, 
+                             hltRecoEcalSingleCandidate,
+                             hltSingleL1MatchFilter,
                              hltSingleElectronEtFilter, 
                              hltSingleElectronHcalIsol, hltSingleElectronHcalIsolFilter,
 	                     pixelMatchElectronSequenceForHLT,hltSingleElectronPixelMatchFilter,

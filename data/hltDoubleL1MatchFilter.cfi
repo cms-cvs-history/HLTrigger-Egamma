@@ -1,0 +1,6 @@
+//DOUBLE ISOLATED 
+module hltDoubleL1MatchFilter = HLTEgammaL1MatchFilter {
+      InputTag candTag = hltRecoEcalDoubleCandidate
+      InputTag l1Tag = l1extraParticles:Isolated
+      int32  ncandcut = 2
+}

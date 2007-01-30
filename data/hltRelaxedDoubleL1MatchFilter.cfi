@@ -1,0 +1,6 @@
+//RELAXED DOUBLE
+module hltRelaxedDoubleL1MatchFilter = HLTEgammaL1MatchFilter {
+      InputTag candTag = hltRecoEcalRelaxedDoubleCandidate
+      InputTag l1Tag = l1extraParticles:NonIsolated
+      int32  ncandcut = 2
+}

@@ -16,7 +16,10 @@
   }
 
 
-  sequence relaxedDoublePhoton = {l1seedRelaxedDouble,ecalClusteringSequence,hltRecoEcalRelaxedDoubleCandidate,
+  sequence relaxedDoublePhoton = {
+                                  l1seedRelaxedDouble,ecalClusteringSequence,
+                                  hltRecoEcalRelaxedDoubleCandidate,
+                                  hltRelaxedDoubleL1MatchFilter,
                                   hltRelaxedDoublePhotonEtFilter, 
 	                          hltRelaxedDoublePhotonEcalIsol, hltRelaxedDoublePhotonEcalIsolFilter,
                                   hltRelaxedDoublePhotonHcalIsol, hltRelaxedDoublePhotonHcalIsolFilter,

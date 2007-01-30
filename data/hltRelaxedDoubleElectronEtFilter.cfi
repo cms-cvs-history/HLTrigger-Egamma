@@ -1,6 +1,6 @@
 //ELECTRONS
 module hltRelaxedDoubleElectronEtFilter = HLTEgammaEtFilter {
-      InputTag inputTag = hltRecoEcalRelaxedDoubleCandidate
+      InputTag inputTag = hltRelaxedDoubleL1MatchFilter
       double etcut = 19.0
       int32  ncandcut = 2
 }

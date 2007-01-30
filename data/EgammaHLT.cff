@@ -11,10 +11,15 @@
  # tracker: defines ckftracks and rstracks
  include "Configuration/Examples/data/RecoTracker.cff"
 
-
-
  include "L1Trigger/L1ExtraFromDigis/data/l1extra.cff"
  path dol1extra = {l1emulator,l1extra}	
+
+include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
+include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
+
+ include "HLTrigger/Egamma/data/hltSingleL1MatchFilter.cfi"
+ include "HLTrigger/Egamma/data/hltDoubleL1MatchFilter.cfi"
+ include "HLTrigger/Egamma/data/hltRelaxedDoubleL1MatchFilter.cfi"
 
   module l1seedSingle = HLTLevel1Seed {
          vuint32 L1Seeds = {0}

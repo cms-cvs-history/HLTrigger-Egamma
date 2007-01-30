@@ -18,7 +18,9 @@
 
   sequence doubleElectron = {
                               l1seedDouble,
-                              ecalClusteringSequence, hltRecoEcalDoubleCandidate,
+                              ecalClusteringSequence,
+                              hltRecoEcalDoubleCandidate,
+                              hltDoubleL1MatchFilter,
                               hltDoubleElectronEtFilter, 
                               hltDoubleElectronHcalIsol, hltDoubleElectronHcalIsolFilter,
 	                      pixelMatchElectronSequenceForHLT,hltDoubleElectronPixelMatchFilter,
