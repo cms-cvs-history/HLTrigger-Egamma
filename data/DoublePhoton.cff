@@ -17,7 +17,11 @@
          uint32 eventOffset    = 0
   }
 
-  sequence doublePhoton = {l1seedDouble,ecalClusteringSequence,hltRecoEcalDoubleCandidate,
+  sequence doublePhoton = {
+                           l1seedDouble,
+                           ecalClusteringSequence,
+                           hltRecoEcalDoubleCandidate,
+                           hltDoubleL1MatchFilter,
                            hltDoublePhotonEtFilter, 
 	                   hltDoublePhotonEcalIsol, hltDoublePhotonEcalIsolFilter,
                            hltDoublePhotonHcalIsol, hltDoublePhotonHcalIsolFilter,
