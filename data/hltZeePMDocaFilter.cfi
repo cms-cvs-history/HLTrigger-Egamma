@@ -1,0 +1,9 @@
+module HltZeePMDocaFilter = HLTPMDocaFilter {
+
+      InputTag candTag                = HltZeePMMassFilter
+      InputTag elecTag                = pixelMatchElectronsForHLT
+      double   docaDiffPerpCutLow       = 0.0 # three sigma
+      double   docaDiffPerpCutHigh       = 0.055691 # three sigma
+      int32    ncandcut               = 1
+}
+
