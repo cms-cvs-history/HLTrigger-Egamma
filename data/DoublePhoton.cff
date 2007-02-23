@@ -18,14 +18,14 @@
   }
 
   sequence doublePhoton = {
-                           l1seedDouble,
-                           ecalClusteringSequence,
-                           hltRecoEcalDoubleCandidate,
-                           hltDoubleL1MatchFilter,
-                           hltDoublePhotonEtFilter, 
-	                   hltDoublePhotonEcalIsol, hltDoublePhotonEcalIsolFilter,
-                           hltDoublePhotonHcalIsol, hltDoublePhotonHcalIsolFilter,
-  	                   ckftracks,hltDoublePhotonTrackIsol,hltDoublePhotonTrackIsolFilter,
-                           hltDoublePhotonDoubleEtFilter,
+                           l1seedDouble &
+                           ecalClusteringSequence &
+                           hltRecoEcalDoubleCandidate &
+                           hltDoubleL1MatchFilter &
+                           hltDoublePhotonEtFilter & 
+	                   hltDoublePhotonEcalIsol & hltDoublePhotonEcalIsolFilter &
+                           hltDoublePhotonHcalIsol & hltDoublePhotonHcalIsolFilter &
+  	                   ckftracks & hltDoublePhotonTrackIsol &hltDoublePhotonTrackIsolFilter &
+                           hltDoublePhotonDoubleEtFilter &
                            doublePhotonPresc
 	                  }

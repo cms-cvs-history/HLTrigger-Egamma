@@ -17,13 +17,13 @@
 
 
   sequence relaxedDoublePhoton = {
-                                  l1seedRelaxedDouble,ecalClusteringSequence,
-                                  hltRecoEcalRelaxedDoubleCandidate,
-                                  hltRelaxedDoubleL1MatchFilter,
-                                  hltRelaxedDoublePhotonEtFilter, 
-	                          hltRelaxedDoublePhotonEcalIsol, hltRelaxedDoublePhotonEcalIsolFilter,
-                                  hltRelaxedDoublePhotonHcalIsol, hltRelaxedDoublePhotonHcalIsolFilter,
-  	                          ckftracks,hltRelaxedDoublePhotonTrackIsol,hltRelaxedDoublePhotonTrackIsolFilter,
-                                  hltRelaxedDoublePhotonDoubleEtFilter,
+                                  l1seedRelaxedDouble &ecalClusteringSequence &
+                                  hltRecoEcalRelaxedDoubleCandidate &
+                                  hltRelaxedDoubleL1MatchFilter &
+                                  hltRelaxedDoublePhotonEtFilter & 
+	                          hltRelaxedDoublePhotonEcalIsol & hltRelaxedDoublePhotonEcalIsolFilter &
+                                  hltRelaxedDoublePhotonHcalIsol & hltRelaxedDoublePhotonHcalIsolFilter &
+  	                          ckftracks & hltRelaxedDoublePhotonTrackIsol &hltRelaxedDoublePhotonTrackIsolFilter &
+                                  hltRelaxedDoublePhotonDoubleEtFilter &
                                   relaxedDoublePhotonPresc
 	                         }

@@ -12,7 +12,7 @@
  include "Configuration/Examples/data/RecoTracker.cff"
 
  include "L1Trigger/L1ExtraFromDigis/data/l1extra.cff"
- path dol1extra = {l1emulator,l1extra}	
+ path dol1extra = {l1emulator & l1extra}	
 
 include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
 include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"

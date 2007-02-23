@@ -18,12 +18,12 @@
 
 
   sequence singlePhoton = {
-                           l1seedSingle,ecalClusteringSequence,
-                           hltRecoEcalSingleCandidate,
-                           hltSingleL1MatchFilter,
-                           hltSinglePhotonEtFilter, 
-	                   hltSinglePhotonEcalIsol, hltSinglePhotonEcalIsolFilter,
-                           hltSinglePhotonHcalIsol, hltSinglePhotonHcalIsolFilter,
-  	                   ckftracks,hltSinglePhotonTrackIsol,hltSinglePhotonTrackIsolFilter,
+                           l1seedSingle & ecalClusteringSequence &
+                           hltRecoEcalSingleCandidate &
+                           hltSingleL1MatchFilter &
+                           hltSinglePhotonEtFilter & 
+	                   hltSinglePhotonEcalIsol & hltSinglePhotonEcalIsolFilter &
+                           hltSinglePhotonHcalIsol & hltSinglePhotonHcalIsolFilter &
+  	                   ckftracks & hltSinglePhotonTrackIsol & hltSinglePhotonTrackIsolFilter &
                            singlePhotonPresc
 	                   }

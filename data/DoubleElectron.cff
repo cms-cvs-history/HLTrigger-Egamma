@@ -17,14 +17,14 @@
 
 
   sequence doubleElectron = {
-                              l1seedDouble,
-                              ecalClusteringSequence,
-                              hltRecoEcalDoubleCandidate,
-                              hltDoubleL1MatchFilter,
-                              hltDoubleElectronEtFilter, 
-                              hltDoubleElectronHcalIsol, hltDoubleElectronHcalIsolFilter,
-	                      pixelMatchElectronSequenceForHLT,hltDoubleElectronPixelMatchFilter,
-                              pixelMatchElectronTrackingSequenceForHLT,
-                              ckftracks,hltDoubleElectronTrackIsol,hltDoubleElectronTrackIsolFilter,
+                              l1seedDouble &
+                              ecalClusteringSequence &
+                              hltRecoEcalDoubleCandidate &
+                              hltDoubleL1MatchFilter &
+                              hltDoubleElectronEtFilter & 
+                              hltDoubleElectronHcalIsol & hltDoubleElectronHcalIsolFilter &
+	                      pixelMatchElectronSequenceForHLT & hltDoubleElectronPixelMatchFilter &
+                              pixelMatchElectronTrackingSequenceForHLT &
+                              ckftracks &hltDoubleElectronTrackIsol &hltDoubleElectronTrackIsolFilter &
                               doubleElectronPresc
                          }

@@ -16,16 +16,16 @@
 
 
   sequence singleElectron = {
-                             l1seedSingle,
-                             ecalClusteringSequence, 
-                             hltRecoEcalSingleCandidate,
-                             hltSingleL1MatchFilter,
-                             hltSingleElectronEtFilter, 
-                             hltSingleElectronHcalIsol, hltSingleElectronHcalIsolFilter,
-	                     pixelMatchElectronSequenceForHLT,hltSingleElectronPixelMatchFilter,
-                             pixelMatchElectronTrackingSequenceForHLT,
-                             ckftracks,hltSingleElectronTrackIsol,hltSingleElectronTrackIsolFilter,
-                             hltSingleElectronEoverpFilter,
+                             l1seedSingle &
+                             ecalClusteringSequence & 
+                             hltRecoEcalSingleCandidate &
+                             hltSingleL1MatchFilter &
+                             hltSingleElectronEtFilter & 
+                             hltSingleElectronHcalIsol & hltSingleElectronHcalIsolFilter &
+	                     pixelMatchElectronSequenceForHLT & hltSingleElectronPixelMatchFilter &
+                             pixelMatchElectronTrackingSequenceForHLT &
+                             ckftracks & hltSingleElectronTrackIsol &hltSingleElectronTrackIsolFilter &
+                             hltSingleElectronEoverpFilter &
                              singleElectronPresc
                          }
 

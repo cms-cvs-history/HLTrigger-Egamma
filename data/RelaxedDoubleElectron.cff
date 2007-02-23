@@ -19,14 +19,14 @@
 
 
   sequence relaxedDoubleElectron = {
-                                    l1seedRelaxedDouble,
-                                    ecalClusteringSequence, 
-                                    hltRecoEcalRelaxedDoubleCandidate,
-                                    hltRelaxedDoubleL1MatchFilter,
-                                    hltRelaxedDoubleElectronEtFilter, 
-                                    hltRelaxedDoubleElectronHcalIsol, hltRelaxedDoubleElectronHcalIsolFilter,
-	                            pixelMatchElectronSequenceForHLT,hltRelaxedDoubleElectronPixelMatchFilter,
-                                    pixelMatchElectronTrackingSequenceForHLT,
-                                    ckftracks,hltRelaxedDoubleElectronTrackIsol,hltRelaxedDoubleElectronTrackIsolFilter,
+                                    l1seedRelaxedDouble &
+                                    ecalClusteringSequence & 
+                                    hltRecoEcalRelaxedDoubleCandidate &
+                                    hltRelaxedDoubleL1MatchFilter &
+                                    hltRelaxedDoubleElectronEtFilter & 
+                                    hltRelaxedDoubleElectronHcalIsol & hltRelaxedDoubleElectronHcalIsolFilter &
+	                            pixelMatchElectronSequenceForHLT & hltRelaxedDoubleElectronPixelMatchFilter &
+                                    pixelMatchElectronTrackingSequenceForHLT &
+                                    ckftracks & hltRelaxedDoubleElectronTrackIsol &hltRelaxedDoubleElectronTrackIsolFilter &
                                     relaxedDoubleElectronPresc
                                 }
