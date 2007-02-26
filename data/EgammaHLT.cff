@@ -9,7 +9,7 @@
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronSequenceForHLT.cff"
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronTrackingSequenceForHLT.cff"
  # tracker: defines ckftracks and rstracks
- include "Configuration/Examples/data/RecoTracker.cff"
+ ###### JW include "Configuration/Examples/data/RecoTracker.cff"
 
  include "L1Trigger/L1ExtraFromDigis/data/l1extra.cff"
  path dol1extra = {l1emulator & l1extra}	

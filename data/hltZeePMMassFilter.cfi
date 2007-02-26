@@ -1,9 +1,8 @@
 module HltZeePMMassFilter = HLTPMMassFilter {
 
       InputTag candTag                = hltDoubleElectronTrackIsolFilter
-      InputTag elecTag                = pixelMatchElectronsForHLT
       double   lowerMassCut           = 48.275 # five sigma
       double   upperMassCut           = 128.550 # five sigma
-      int32    ncandcut               = 1
+      int32    nZcandcut               = 1 # by candidate we now mean Z candiate
 }
 
