@@ -15,9 +15,9 @@
   }
 
 
-  sequence singleElectron = {
+  sequence singleElectron = {doL1T &
                              l1seedSingle &
-                             ecalClusteringSequence & 
+                             ecalClusters & 
                              hltRecoEcalSingleCandidate &
                              hltSingleL1MatchFilter &
                              hltSingleElectronEtFilter & 
@@ -27,5 +27,5 @@
                              ckftracks & hltSingleElectronTrackIsol &hltSingleElectronTrackIsolFilter &
                              hltSingleElectronEoverpFilter &
                              singleElectronPresc
-                         }
+                            }
 

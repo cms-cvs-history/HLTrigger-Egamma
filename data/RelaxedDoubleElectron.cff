@@ -18,9 +18,9 @@
 
 
 
-  sequence relaxedDoubleElectron = {
+  sequence relaxedDoubleElectron = {doL1T &
                                     l1seedRelaxedDouble &
-                                    ecalClusteringSequence & 
+                                    ecalClusters & 
                                     hltRecoEcalRelaxedDoubleCandidate &
                                     hltRelaxedDoubleL1MatchFilter &
                                     hltRelaxedDoubleElectronEtFilter & 
@@ -29,4 +29,4 @@
                                     pixelMatchElectronTrackingSequenceForHLT &
                                     ckftracks & hltRelaxedDoubleElectronTrackIsol &hltRelaxedDoubleElectronTrackIsolFilter &
                                     relaxedDoubleElectronPresc
-                                }
+                                   } 

@@ -16,8 +16,9 @@
   }
 
 
-  sequence relaxedDoublePhoton = {
-                                  l1seedRelaxedDouble &ecalClusteringSequence &
+  sequence relaxedDoublePhoton = {doL1T &
+                                  l1seedRelaxedDouble &
+                                  ecalClusters &
                                   hltRecoEcalRelaxedDoubleCandidate &
                                   hltRelaxedDoubleL1MatchFilter &
                                   hltRelaxedDoublePhotonEtFilter & 

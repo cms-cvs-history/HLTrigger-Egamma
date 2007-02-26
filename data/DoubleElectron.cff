@@ -16,15 +16,15 @@
 
 
 
-  sequence doubleElectron = {
-                              l1seedDouble &
-                              ecalClusteringSequence &
-                              hltRecoEcalDoubleCandidate &
-                              hltDoubleL1MatchFilter &
-                              hltDoubleElectronEtFilter & 
-                              hltDoubleElectronHcalIsol & hltDoubleElectronHcalIsolFilter &
-	                      pixelMatchElectronSequenceForHLT & hltDoubleElectronPixelMatchFilter &
-                              pixelMatchElectronTrackingSequenceForHLT &
-                              ckftracks &hltDoubleElectronTrackIsol &hltDoubleElectronTrackIsolFilter &
-                              doubleElectronPresc
-                         }
+  sequence doubleElectron = {doL1T &
+                             l1seedDouble &
+                             ecalClusters &
+                             hltRecoEcalDoubleCandidate &
+                             hltDoubleL1MatchFilter &
+                             hltDoubleElectronEtFilter & 
+                             hltDoubleElectronHcalIsol & hltDoubleElectronHcalIsolFilter &
+	                     pixelMatchElectronSequenceForHLT & hltDoubleElectronPixelMatchFilter &
+                             pixelMatchElectronTrackingSequenceForHLT &
+                             ckftracks &hltDoubleElectronTrackIsol &hltDoubleElectronTrackIsolFilter &
+                             doubleElectronPresc
+                            }

@@ -17,8 +17,9 @@
 
 
 
-  sequence singlePhoton = {
-                           l1seedSingle & ecalClusteringSequence &
+  sequence singlePhoton = {doL1T &
+                           l1seedSingle & 
+                           ecalClusters &
                            hltRecoEcalSingleCandidate &
                            hltSingleL1MatchFilter &
                            hltSinglePhotonEtFilter & 
@@ -26,4 +27,4 @@
                            hltSinglePhotonHcalIsol & hltSinglePhotonHcalIsolFilter &
   	                   ckftracks & hltSinglePhotonTrackIsol & hltSinglePhotonTrackIsolFilter &
                            singlePhotonPresc
-	                   }
+	                  }

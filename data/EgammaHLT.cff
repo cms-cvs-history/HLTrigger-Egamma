@@ -1,4 +1,5 @@
- include "RecoEcal/EgammaClusterProducers/data/ecalClusteringSequence.cff"
+
+ include "RecoEcal/Configuration/data/RecoEcal.cff"
 
  include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalSingleCandidate.cfi"
  include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalDoubleCandidate.cfi"
@@ -9,11 +10,11 @@
  # tracker: defines ckftracks and rstracks
  include "Configuration/Examples/data/RecoTracker.cff"
 
- include "L1Trigger/L1ExtraFromDigis/data/l1extra.cff"
- path dol1extra = {l1emulator & l1extra}	
 
-include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
-include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
+ include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
+
+ include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
+ include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
 
  include "HLTrigger/Egamma/data/hltSingleL1MatchFilter.cfi"
  include "HLTrigger/Egamma/data/hltDoubleL1MatchFilter.cfi"
@@ -47,3 +48,5 @@ include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
          InputTag L1ExtraParticleMap = l1extraParticleMap
          InputTag L1GTReadoutRecord  = l1extraParticleMap
         }
+
+
