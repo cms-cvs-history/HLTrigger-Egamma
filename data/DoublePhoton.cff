@@ -25,7 +25,9 @@
                            hltDoublePhotonEtFilter & 
 	                   hltDoublePhotonEcalIsol & hltDoublePhotonEcalIsolFilter &
                            hltDoublePhotonHcalIsol & hltDoublePhotonHcalIsolFilter &
-  	                   ckftracks & hltDoublePhotonTrackIsol &hltDoublePhotonTrackIsolFilter &
+                           //ckftracks 
+                           hltDoubleRegionalCkfTracks
+                           & hltDoublePhotonTrackIsol &hltDoublePhotonTrackIsolFilter &
                            hltDoublePhotonDoubleEtFilter &
                            doublePhotonPresc
 	                  }

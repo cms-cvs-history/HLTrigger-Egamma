@@ -27,6 +27,8 @@
                                     hltRelaxedDoubleElectronHcalIsol & hltRelaxedDoubleElectronHcalIsolFilter &
 	                            pixelMatchElectronSequenceForHLT & hltRelaxedDoubleElectronPixelMatchFilter &
                                     pixelMatchElectronTrackingSequenceForHLT &
-                                    ckftracks & hltRelaxedDoubleElectronTrackIsol &hltRelaxedDoubleElectronTrackIsolFilter &
+                                    //ckftracks 
+                                    hltRelaxedDoubleRegionalCkfTracks
+                                    & hltRelaxedDoubleElectronTrackIsol &hltRelaxedDoubleElectronTrackIsolFilter &
                                     relaxedDoubleElectronPresc
                                    } 

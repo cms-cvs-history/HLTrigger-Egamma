@@ -25,6 +25,8 @@
                              hltDoubleElectronHcalIsol & hltDoubleElectronHcalIsolFilter &
 	                     pixelMatchElectronSequenceForHLT & hltDoubleElectronPixelMatchFilter &
                              pixelMatchElectronTrackingSequenceForHLT &
-                             ckftracks &hltDoubleElectronTrackIsol &hltDoubleElectronTrackIsolFilter &
+                             //ckftracks 
+                             hltDoubleRegionalCkfTracks
+                             &hltDoubleElectronTrackIsol &hltDoubleElectronTrackIsolFilter &
                              doubleElectronPresc
                             }

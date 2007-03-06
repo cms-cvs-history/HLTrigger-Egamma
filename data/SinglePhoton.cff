@@ -25,6 +25,8 @@
                            hltSinglePhotonEtFilter & 
 	                   hltSinglePhotonEcalIsol & hltSinglePhotonEcalIsolFilter &
                            hltSinglePhotonHcalIsol & hltSinglePhotonHcalIsolFilter &
-  	                   ckftracks & hltSinglePhotonTrackIsol & hltSinglePhotonTrackIsolFilter &
+                           //ckftracks 
+                           hltSingleRegionalCkfTracks
+                           & hltSinglePhotonTrackIsol & hltSinglePhotonTrackIsolFilter &
                            singlePhotonPresc
 	                  }
