@@ -24,8 +24,8 @@
                                   hltRelaxedDoublePhotonEtFilter & 
 	                          hltRelaxedDoublePhotonEcalIsol & hltRelaxedDoublePhotonEcalIsolFilter &
                                   hltRelaxedDoublePhotonHcalIsol & hltRelaxedDoublePhotonHcalIsolFilter &
-                                  //ckftracks 
-                                  hltRelaxedDoubleRegionalCkfTracks
+                                  ckftracks 
+                                  //hltRelaxedDoubleRegionalCkfTracks
                                   & hltRelaxedDoublePhotonTrackIsol &hltRelaxedDoublePhotonTrackIsolFilter &
                                   hltRelaxedDoublePhotonDoubleEtFilter &
                                   relaxedDoublePhotonPresc

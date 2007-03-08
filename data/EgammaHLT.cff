@@ -8,10 +8,10 @@
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronSequenceForHLT.cff"
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronTrackingSequenceForHLT.cff"
  # tracker: defines ckftracks and rstracks
- #include "RecoTracker/Configuration/data/RecoTracker.cff"
-  include "RecoEgamma/EgammaHLTProducers/data/hltSingleRegionalRecoTracker.cff"
-  include "RecoEgamma/EgammaHLTProducers/data/hltDoubleRegionalRecoTracker.cff"
-  include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoubleRegionalRecoTracker.cff"
+ include "RecoTracker/Configuration/data/RecoTracker.cff"
+ # include "RecoEgamma/EgammaHLTProducers/data/hltSingleRegionalRecoTracker.cff"
+ # include "RecoEgamma/EgammaHLTProducers/data/hltDoubleRegionalRecoTracker.cff"
+ # include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoubleRegionalRecoTracker.cff"
 
  include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
 

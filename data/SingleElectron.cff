@@ -24,8 +24,8 @@
                              hltSingleElectronHcalIsol & hltSingleElectronHcalIsolFilter &
 	                     pixelMatchElectronSequenceForHLT & hltSingleElectronPixelMatchFilter &
                              pixelMatchElectronTrackingSequenceForHLT &
-                             //ckftracks 
-                             hltSingleRegionalCkfTracks
+                             ckftracks 
+                             //hltSingleRegionalCkfTracks
                              & hltSingleElectronTrackIsol &hltSingleElectronTrackIsolFilter &
                              hltSingleElectronEoverpFilter &
                              singleElectronPresc
