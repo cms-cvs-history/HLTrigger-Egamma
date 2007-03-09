@@ -17,15 +17,15 @@
 
   sequence singleElectron = {doL1T &
                              l1seedSingle &
-                             ecalLocalRecoSequence &
+//                           ecalLocalRecoSequence &
+                             calolocalreco & // !
                              ecalClusters & 
                              hltRecoEcalSingleCandidate &
                              hltSingleL1MatchFilter &
                              hltSingleElectronEtFilter &
-                             hbhereco & hfreco & horeco &
+//                           hcalLocalRecoSequence &
                              hltSingleElectronHcalIsol & hltSingleElectronHcalIsolFilter &
-                             siPixelClusters & siPixelRecHits &
-                             siStripClusters & siStripMatchedRecHits &
+                             trackerlocalreco &
 	                     pixelMatchElectronSequenceForHLT & hltSingleElectronPixelMatchFilter &
                              pixelMatchElectronTrackingSequenceForHLT &
                              ckftracks &

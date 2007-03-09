@@ -19,16 +19,16 @@
 
   sequence doublePhoton = {doL1T &
                            l1seedDouble &
-                           ecalLocalRecoSequence &
+//                         ecalLocalRecoSequence &
+                           calolocalreco // !
                            ecalClusters &
                            hltRecoEcalDoubleCandidate &
                            hltDoubleL1MatchFilter &
                            hltDoublePhotonEtFilter & 
 	                   hltDoublePhotonEcalIsol & hltDoublePhotonEcalIsolFilter &
-                           hbhereco & hfreco & horeco &
+//                         hcalLocalRecoSequence &
                            hltDoublePhotonHcalIsol & hltDoublePhotonHcalIsolFilter &
-                           siPixelClusters & siPixelRecHits &
-                           siStripClusters & siStripMatchedRecHits &
+                           trackerlocalreco &
                            ckftracks 
                            //hltDoubleRegionalCkfTracks
                            & hltDoublePhotonTrackIsol &hltDoublePhotonTrackIsolFilter &
