@@ -22,6 +22,38 @@
  include "HLTrigger/Egamma/data/hltDoubleL1MatchFilter.cfi"
  include "HLTrigger/Egamma/data/hltRelaxedDoubleL1MatchFilter.cfi"
 
+
+
+# Ecal part
+include "RecoLocalCalo/Configuration/data/ecalLocalRecoSequence.cff"
+#
+# Hcal part
+# calo geometry
+include "Geometry/CaloEventSetup/data/CaloGeometry.cfi"
+#HCAL reconstruction
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hbhe.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-ho.cfi"
+include "RecoLocalCalo/HcalRecProducers/data/HcalSimpleReconstructor-hf.cfi" 
+
+
+#
+# Tracker Local Reco
+
+# Initialize magnetic field
+include "MagneticField/Engine/data/volumeBasedMagneticField.cfi"
+include "Geometry/CMSCommonData/data/cmsIdealGeometryXML.cfi"  
+#
+
+include "Geometry/TrackerGeometryBuilder/data/trackerGeometry.cfi"
+include "Geometry/TrackerNumberingBuilder/data/trackerNumberingGeometry.cfi"
+include "RecoLocalTracker/SiStripRecHitConverter/data/SiStripRecHitConverter.cfi"
+include "RecoLocalTracker/SiStripRecHitConverter/data/SiStripRecHitMatcher.cfi"
+include "RecoLocalTracker/SiStripRecHitConverter/data/StripCPEfromTrackAngle.cfi"
+include "RecoLocalTracker/SiStripClusterizer/data/SiStripClusterizer.cfi"
+include "RecoLocalTracker/SiPixelClusterizer/data/SiPixelClusterizer.cfi"
+include "RecoLocalTracker/SiPixelRecHits/data/SiPixelRecHits.cfi"
+
+
   module l1seedSingle = HLTLevel1Seed {
          vuint32 L1Seeds = {0}
          bool andOr = true

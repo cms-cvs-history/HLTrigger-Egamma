@@ -19,12 +19,16 @@
 
   sequence singlePhoton = {doL1T &
                            l1seedSingle & 
+                           ecalLocalRecoSequence &
                            ecalClusters &
                            hltRecoEcalSingleCandidate &
                            hltSingleL1MatchFilter &
                            hltSinglePhotonEtFilter & 
 	                   hltSinglePhotonEcalIsol & hltSinglePhotonEcalIsolFilter &
+                           hbhereco & hfreco & horeco &
                            hltSinglePhotonHcalIsol & hltSinglePhotonHcalIsolFilter &
+                           siPixelClusters & siPixelRecHits &
+                           siStripClusters & siStripMatchedRecHits &
                            ckftracks 
                            //hltSingleRegionalCkfTracks
                            & hltSinglePhotonTrackIsol & hltSinglePhotonTrackIsolFilter &

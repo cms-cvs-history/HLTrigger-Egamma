@@ -18,11 +18,15 @@
 
   sequence doubleElectron = {doL1T &
                              l1seedDouble &
+                             ecalLocalRecoSequence &
                              ecalClusters &
                              hltRecoEcalDoubleCandidate &
                              hltDoubleL1MatchFilter &
-                             hltDoubleElectronEtFilter & 
+                             hltDoubleElectronEtFilter &
+                             hbhereco & hfreco & horeco & 
                              hltDoubleElectronHcalIsol & hltDoubleElectronHcalIsolFilter &
+                             siPixelClusters & siPixelRecHits &
+                             siStripClusters & siStripMatchedRecHits &
 	                     pixelMatchElectronSequenceForHLT & hltDoubleElectronPixelMatchFilter &
                              pixelMatchElectronTrackingSequenceForHLT &
                              ckftracks 

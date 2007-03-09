@@ -20,11 +20,15 @@
 
   sequence relaxedDoubleElectron = {doL1T &
                                     l1seedRelaxedDouble &
+                                    ecalLocalRecoSequence &
                                     ecalClusters & 
                                     hltRecoEcalRelaxedDoubleCandidate &
                                     hltRelaxedDoubleL1MatchFilter &
-                                    hltRelaxedDoubleElectronEtFilter & 
+                                    hltRelaxedDoubleElectronEtFilter &
+                                    hbhereco & hfreco & horeco & 
                                     hltRelaxedDoubleElectronHcalIsol & hltRelaxedDoubleElectronHcalIsolFilter &
+                                    siPixelClusters & siPixelRecHits &
+                                    siStripClusters & siStripMatchedRecHits &
 	                            pixelMatchElectronSequenceForHLT & hltRelaxedDoubleElectronPixelMatchFilter &
                                     pixelMatchElectronTrackingSequenceForHLT &
                                     ckftracks 

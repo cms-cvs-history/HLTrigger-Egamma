@@ -18,12 +18,16 @@
 
   sequence relaxedDoublePhoton = {doL1T &
                                   l1seedRelaxedDouble &
+                                  ecalLocalRecoSequence &
                                   ecalClusters &
                                   hltRecoEcalRelaxedDoubleCandidate &
                                   hltRelaxedDoubleL1MatchFilter &
                                   hltRelaxedDoublePhotonEtFilter & 
 	                          hltRelaxedDoublePhotonEcalIsol & hltRelaxedDoublePhotonEcalIsolFilter &
+                                  hbhereco & hfreco & horeco &
                                   hltRelaxedDoublePhotonHcalIsol & hltRelaxedDoublePhotonHcalIsolFilter &
+                                  siPixelClusters & siPixelRecHits &
+                                  siStripClusters & siStripMatchedRecHits &
                                   ckftracks 
                                   //hltRelaxedDoubleRegionalCkfTracks
                                   & hltRelaxedDoublePhotonTrackIsol &hltRelaxedDoublePhotonTrackIsolFilter &
