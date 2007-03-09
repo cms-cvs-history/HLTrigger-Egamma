@@ -20,7 +20,7 @@
   sequence doublePhoton = {doL1T &
                            l1seedDouble &
 //                         ecalLocalRecoSequence &
-                           calolocalreco // !
+                           calolocalreco & // !
                            ecalClusters &
                            hltRecoEcalDoubleCandidate &
                            hltDoubleL1MatchFilter &
