@@ -1,0 +1,12 @@
+#
+# producer for hltPhotonEcalIsolFilter
+#
+module hltPhotonEcalIsolFilter = HLTEgammaEcalIsolFilter {
+
+      InputTag candTag = hltPhotonEtFilter
+      InputTag isoTag  = hltPhotonEcalIsol
+      double ecalisolcut = 1.5
+      int32 ncandcut = 1
+}
+
+

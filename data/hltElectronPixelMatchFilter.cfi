@@ -1,0 +1,9 @@
+module hltElectronPixelMatchFilter = HLTElectronPixelMatchFilter {
+
+      InputTag candTag                = hltEgammaHcalIsolFilter
+      InputTag pixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
+      InputTag pixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
+      double   npixelmatchcut         = 1
+      int32    ncandcut               = 1
+}
+

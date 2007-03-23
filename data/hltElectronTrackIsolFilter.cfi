@@ -1,0 +1,6 @@
+module hltElectronTrackIsolFilter = HLTElectronTrackIsolFilterRegional {
+      InputTag candTag      = hltElectronEoverpFilter
+      InputTag isoTag       = hltElectronTrackIsol
+      double pttrackisolcut = 0.06
+      int32 ncandcut         = 1
+}
