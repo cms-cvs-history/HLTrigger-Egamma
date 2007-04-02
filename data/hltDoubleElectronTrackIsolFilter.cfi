@@ -4,6 +4,8 @@
 module hltDoubleElectronTrackIsolFilter = HLTElectronTrackIsolFilter {
       InputTag candTag      = hltDoubleElectronPixelMatchFilter
       InputTag isoTag       = hltDoubleElectronTrackIsol
+      InputTag nonIsoTag  = hltPhotonNonIsoTrackIsol
+      bool doIsolated = true
       double pttrackisolcut = 0.4
       int32 ncandcut         = 2
 }

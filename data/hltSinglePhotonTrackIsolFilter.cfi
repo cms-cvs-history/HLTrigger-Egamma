@@ -4,6 +4,8 @@
 module hltSinglePhotonTrackIsolFilter = HLTPhotonTrackIsolFilter {
       InputTag candTag = hltSinglePhotonHcalIsolFilter
       InputTag isoTag  = hltSinglePhotonTrackIsol
+      InputTag nonIsoTag  = hltPhotonNonIsoTrackIsol
+      bool doIsolated = true
       double numtrackisolcut = 1
       int32 ncandcut = 1
 }

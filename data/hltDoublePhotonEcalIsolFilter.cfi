@@ -5,8 +5,10 @@ module hltDoublePhotonEcalIsolFilter = HLTEgammaEcalIsolFilter {
 
       InputTag candTag = hltDoublePhotonEtFilter
       InputTag isoTag  = hltDoublePhotonEcalIsol
+      InputTag nonIsoTag  = hltPhotonEcalNonIsol
       double ecalisolcut = 2.5
       int32 ncandcut = 2
+      bool doIsolated = true
 }
 
 

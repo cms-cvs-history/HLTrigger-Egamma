@@ -73,7 +73,9 @@ module hltL1IsoSingleElectronPixelMatchFilter = hltElectronPixelMatchFilter from
  module hltL1IsoSingleElectronEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
 
  replace hltL1IsoSingleElectronEoverpFilter.candTag = hltL1IsoSingleElectronPixelMatchFilter
- replace hltL1IsoSingleElectronEoverpFilter.electronProducer = pixelMatchElectronsL1IsoForHLT 
+ replace hltL1IsoSingleElectronEoverpFilter.electronIsolatedProducer = pixelMatchElectronsL1IsoForHLT 
+replace hltL1IsoSingleElectronEoverpFilter.doIsolated = true
+
 #      double eoverpbarrelcut = 1.5
 #      double eoverpendcapcut = 2.45
 #      int32 ncandcut = 1

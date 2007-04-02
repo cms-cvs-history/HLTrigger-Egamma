@@ -11,6 +11,7 @@
 
 # include "RecoEcal/Configuration/data/RecoEcal.cff"
  include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedEcalSuperClusters.cff"
+ include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedEcalSuperClusters.cff"
 ## include "RecoEgamma/EgammaHLTProducers/data/RecoEcalL1Isolated.cff"
  
 #include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalSingleCandidate.cfi"

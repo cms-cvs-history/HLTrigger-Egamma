@@ -1,0 +1,15 @@
+module hltEgammaL1MatchFilterRegional = HLTEgammaL1MatchFilterRegional {
+      InputTag candIsolatedTag = hltRecoIsolatedEcalCandidate
+      InputTag l1IsolatedTag = l1extraParticles:Isolated
+      InputTag candNonIsolatedTag = hltRecoNonIsolatedEcalCandidate
+      InputTag l1NonIsolatedTag = l1extraParticles:NonIsolated
+      bool doIsolated = true
+
+      int32  ncandcut = 1
+
+      double region_eta_size      = 0.522
+      double region_eta_size_ecap = 0.87
+      double region_phi_size      = 1.044
+      double barrel_end           = 1.4791
+      double endcap_end           = 2.5
+}

@@ -4,7 +4,9 @@
 module hltRelaxedDoublePhotonHcalIsolFilter = HLTEgammaHcalIsolFilter {
       InputTag candTag = hltRelaxedDoublePhotonEcalIsolFilter
       InputTag isoTag  = hltRelaxedDoublePhotonHcalIsol
+      InputTag nonIsoTag  = hltSingleEgammaHcalNonIsol
       double hcalisolbarrelcut = 8.
       double hcalisolendcapcut = 6.
       int32 ncandcut = 2
+      bool doIsolated = true
 }
