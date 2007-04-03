@@ -38,13 +38,13 @@ module hltL1IsoDoublePhotonL1MatchFilterRegional = hltEgammaL1MatchFilterRegiona
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
-module hltL1IsoDoublePhotonEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
-#replace hltL1IsoDoublePhotonEtFilter.inputTag = hltL1IsoDoublePhotonL1MatchFilter
- replace hltL1IsoDoublePhotonEtFilter.inputTag = hltL1IsoDoublePhotonL1MatchFilterRegional
- replace hltL1IsoDoublePhotonEtFilter.etcut = 20.0
- replace hltL1IsoDoublePhotonEtFilter.ncandcut = 2
+module hltL1IsoDoublePhotonEtFilter = hltEgammaDoubleEtFilter from "HLTrigger/Egamma/data/hltEgammaDoubleEtFilter.cfi"
+
+replace hltL1IsoDoublePhotonEtFilter.candTag =  hltL1IsoDoublePhotonL1MatchFilterRegional
+#      double etcut1 = 30.0
+#      double etcut2 = 20.0
+#      int32  npaircut = 1
 
 
 #--------------------------------------------------------------------#
