@@ -27,7 +27,7 @@
 
 
   module l1seedSingle = HLTLevel1Seed {
-         vuint32 L1Seeds = {0}
+         vuint32 L1Seeds = {8}
          bool andOr = true
          bool byName= false
          InputTag L1ExtraCollections = l1extraParticles
@@ -37,7 +37,7 @@
 
 
   module l1seedDouble = HLTLevel1Seed {
-         vuint32 L1Seeds = {1}
+         vuint32 L1Seeds = {36}
          bool andOr = true
          bool byName= false
          InputTag L1ExtraCollections = l1extraParticles
@@ -47,7 +47,7 @@
 
 
   module l1seedRelaxedDouble = HLTLevel1Seed {
-         vuint32 L1Seeds = {3}
+         vuint32 L1Seeds = {37}
          bool andOr = true
          bool byName= false
          InputTag L1ExtraCollections = l1extraParticles
