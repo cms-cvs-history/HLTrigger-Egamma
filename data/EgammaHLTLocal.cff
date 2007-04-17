@@ -50,7 +50,7 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
  include "HLTrigger/Egamma/data/hltRelaxedDoubleL1MatchFilter.cfi"
 
   module l1seedSingle = HLTLevel1Seed {
-         vstring L1Seeds = { "SingleIsoEM" }
+         vstring L1Seeds = {"A_SingleIsoEG20"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles
@@ -60,7 +60,7 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
 
 
   module l1seedDouble = HLTLevel1Seed {
-         vstring L1Seeds = { "DoubleIsoEM" }
+         vstring L1Seeds = {"A_DoubleIsoEG10"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles
@@ -70,7 +70,7 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
 
 
   module l1seedRelaxedDouble = HLTLevel1Seed {
-         vstring L1Seeds = { "DoubleRelaxedEM" }
+         vstring L1Seeds = {"A_DoubleEG20"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles

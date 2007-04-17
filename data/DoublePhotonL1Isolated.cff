@@ -112,15 +112,17 @@ replace hltL1IsoDoublePhotonDoubleEtFilter.candTag =  hltL1IsoDoublePhotonTrackI
 
 
   sequence doublePhotonL1Isolated = {#doL1T &
-                           l1seedDouble & 
+                           l1seedDouble &
+                           ecalLocalRecoSequence &
                            l1IsolatedEcalClusters  &
                            l1IsoRecoEcalCandidate &
                            #hltL1IsoDoublePhotonL1MatchFilter &
                            hltL1IsoDoublePhotonL1MatchFilterRegional &
                            hltL1IsoDoublePhotonEtFilter & 
 	                   l1IsolatedPhotonEcalIsol & hltL1IsoDoublePhotonEcalIsolFilter &
+                           hcalLocalRecoSequence &
                            l1IsolatedPhotonHcalIsol & hltL1IsoDoublePhotonHcalIsolFilter &
-                           ### trackerlocalreco &
+                           trackerlocalreco &
                            l1IsoEgammaRegionalRecoTracker &
                            l1IsoPhotonTrackIsol & hltL1IsoDoublePhotonTrackIsolFilter &
 	                   hltL1IsoDoublePhotonDoubleEtFilter &

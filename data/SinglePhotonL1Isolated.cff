@@ -89,13 +89,15 @@ replace  hltL1IsoSinglePhotonTrackIsolFilter.isoTag   = l1IsoPhotonTrackIsol
 
   sequence singlePhotonL1Isolated = {#doL1T &
                            l1seedSingle & 
+		           ecalLocalRecoSequence &
                            l1IsolatedEcalClusters  &
                            l1IsoRecoEcalCandidate &
                            hltL1IsoSinglePhotonL1MatchFilter &
                            hltL1IsoSinglePhotonEtFilter & 
 	                   l1IsolatedPhotonEcalIsol & hltL1IsoSinglePhotonEcalIsolFilter &
+                           hcalLocalRecoSequence &
                            l1IsolatedPhotonHcalIsol & hltL1IsoSinglePhotonHcalIsolFilter &
-                           ### trackerlocalreco &
+                           trackerlocalreco &
                            l1IsoEgammaRegionalRecoTracker &
                            l1IsoPhotonTrackIsol & hltL1IsoSinglePhotonTrackIsolFilter &
                            singlePhotonL1IsoPresc

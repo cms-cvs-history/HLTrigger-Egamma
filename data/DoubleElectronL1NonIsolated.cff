@@ -123,27 +123,27 @@ replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
                                       ##  doL1T &
                                         # was like thisl1seedDouble &
                                         l1seedRelaxedDouble &
-                                      ####//ecalLocalRecoSequence &
-                                      ##  calolocalreco & // !
-                                      #  ecalClusters & 
-	                     l1IsolatedEcalClusters 
+                             ecalLocalRecoSequence &
+                             l1IsolatedEcalClusters 
 			   & l1NonIsolatedEcalClusters 
                            & l1IsoRecoEcalCandidate 
                            & l1NonIsoRecoEcalCandidate
                            & hltL1NonIsoDoubleElectronL1MatchFilterRegional
                            # hltL1IsoDoubleElectronL1MatchFilter
                            & hltL1NonIsoDoubleElectronEtFilter #attention Iso
-
+                           & hcalLocalRecoSequence 
                            & l1IsolatedElectronHcalIsol 
                            & l1NonIsolatedElectronHcalIsol 
 
                            & hltL1NonIsoDoubleElectronHcalIsolFilter #attention Iso
 
-                  ##### trackerlocalreco &              
+                  ##### trackerlocalreco &         
+	                   & pixeltrackerlocalreco     
 	                   & pixelMatchElectronL1IsoSequenceForHLT
 	                   & pixelMatchElectronL1NonIsoSequenceForHLT
 
                            & hltL1NonIsoDoubleElectronPixelMatchFilter
+                           & striptrackerlocalreco 
                            & pixelMatchElectronL1IsoTrackingSequenceForHLT
                            & pixelMatchElectronL1NonIsoTrackingSequenceForHLT
                            & hltL1NonIsoDoubleElectronEoverpFilter

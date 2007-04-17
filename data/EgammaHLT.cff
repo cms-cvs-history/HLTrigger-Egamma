@@ -25,8 +25,8 @@
  include "HLTrigger/Egamma/data/hltDoubleL1MatchFilter.cfi"
  include "HLTrigger/Egamma/data/hltRelaxedDoubleL1MatchFilter.cfi"
 
- module l1seedSingle = HLTLevel1Seed {
-         vstring L1Seeds = { "SingleIsoEM" }
+  module l1seedSingle = HLTLevel1Seed {
+         vstring L1Seeds = {"A_SingleIsoEG20"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles
@@ -36,7 +36,7 @@
 
 
   module l1seedDouble = HLTLevel1Seed {
-         vstring L1Seeds = { "DoubleIsoEM" }
+         vstring L1Seeds = {"A_DoubleIsoEG10"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles
@@ -46,12 +46,10 @@
 
 
   module l1seedRelaxedDouble = HLTLevel1Seed {
-         vstring L1Seeds = { "DoubleRelaxedEM" }
+         vstring L1Seeds = {"A_DoubleEG20"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles
          InputTag L1ExtraParticleMap = l1extraParticleMap
          InputTag L1GTReadoutRecord  = l1extraParticleMap
         }
-
-

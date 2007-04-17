@@ -119,26 +119,28 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
                                       ##  doL1T &
                                         # was like thisl1seedDouble &
                                         l1seedRelaxedDouble &
-                                      ####//ecalLocalRecoSequence &
+                               ecalLocalRecoSequence 
                                       ##  calolocalreco & // !
                                       #  ecalClusters & 
-	                     l1IsolatedEcalClusters 
+	                   &  l1IsolatedEcalClusters 
 			   & l1NonIsolatedEcalClusters 
                            & l1IsoRecoEcalCandidate & l1NonIsoRecoEcalCandidate
                            & hltL1NonIsoDoubleElectronL1MatchFilterRegional
                            # hltL1IsoDoubleElectronL1MatchFilter
                            & hltL1IsoDoubleElectronEtFilter #attention Iso
-
+                           &  hcalLocalRecoSequence 
                            & l1IsolatedElectronHcalIsol 
                            & l1NonIsolatedElectronHcalIsol 
 
                            & hltL1IsoDoubleElectronHcalIsolFilter #attention Iso
 
-                  ##### trackerlocalreco &              
+                  ##### trackerlocalreco &   
+                           &   pixeltrackerlocalreco         
 	                   & pixelMatchElectronL1IsoSequenceForHLT
 	                   & pixelMatchElectronL1NonIsoSequenceForHLT
 
                            & hltL1IsoDoubleElectronPixelMatchFilter
+                           & striptrackerlocalreco
                            & pixelMatchElectronL1IsoTrackingSequenceForHLT
                            & pixelMatchElectronL1NonIsoTrackingSequenceForHLT
                            & hltL1IsoDoubleElectronEoverpFilter
