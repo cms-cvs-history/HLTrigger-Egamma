@@ -120,7 +120,7 @@ replace hltL1IsoDoublePhotonDoubleEtFilter.candTag =  hltL1IsoDoublePhotonTrackI
                            hltL1IsoDoublePhotonL1MatchFilterRegional &
                            hltL1IsoDoublePhotonEtFilter & 
 	                   l1IsolatedPhotonEcalIsol & hltL1IsoDoublePhotonEcalIsolFilter &
-                           hcalLocalRecoSequence &
+                           hcalLocalRecoWithoutHO &
                            l1IsolatedPhotonHcalIsol & hltL1IsoDoublePhotonHcalIsolFilter &
                            trackerlocalreco &
                            l1IsoEgammaRegionalRecoTracker &

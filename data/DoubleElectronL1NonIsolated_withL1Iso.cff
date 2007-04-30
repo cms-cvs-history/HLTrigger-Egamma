@@ -128,7 +128,7 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
                            & hltL1NonIsoDoubleElectronL1MatchFilterRegional
                            # hltL1IsoDoubleElectronL1MatchFilter
                            & hltL1IsoDoubleElectronEtFilter #attention Iso
-                           &  hcalLocalRecoSequence 
+                           &  hcalLocalRecoWithoutHO 
                            & l1IsolatedElectronHcalIsol 
                            & l1NonIsolatedElectronHcalIsol 
 

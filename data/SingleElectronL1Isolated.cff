@@ -112,7 +112,7 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
                                l1IsoRecoEcalCandidate &
                              hltL1IsoSingleL1MatchFilter &
                              hltL1IsoSingleElectronEtFilter &
-                          hcalLocalRecoSequence &
+                          hcalLocalRecoWithoutHO &
                                l1IsolatedElectronHcalIsol & 
                              hltL1IsoSingleElectronHcalIsolFilter &
                              ##### trackerlocalreco &              

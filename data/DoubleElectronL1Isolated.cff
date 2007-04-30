@@ -117,7 +117,7 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
                              #hltL1IsoDoubleElectronL1MatchFilter &
 			     hltL1IsoDoubleElectronL1MatchFilterRegional &
                              hltL1IsoDoubleElectronEtFilter &
-                             hcalLocalRecoSequence &
+                             hcalLocalRecoWithoutHO &
                              l1IsolatedElectronHcalIsol & hltL1IsoDoubleElectronHcalIsolFilter &
                              ##### trackerlocalreco &              
   			     pixeltrackerlocalreco &

@@ -131,7 +131,7 @@ replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
                            & hltL1NonIsoDoubleElectronL1MatchFilterRegional
                            # hltL1IsoDoubleElectronL1MatchFilter
                            & hltL1NonIsoDoubleElectronEtFilter #attention Iso
-                           & hcalLocalRecoSequence 
+                           & hcalLocalRecoWithoutHO
                            & l1IsolatedElectronHcalIsol 
                            & l1NonIsolatedElectronHcalIsol 
 

@@ -142,7 +142,7 @@ replace hltL1NonIsoDoublePhotonDoubleEtFilter.candTag =  hltL1NonIsoDoublePhoton
 	                   & l1IsolatedPhotonEcalIsol 
 	                   & l1NonIsolatedPhotonEcalIsol 
 			   & hltL1NonIsoDoublePhotonEcalIsolFilter
-                           & hcalLocalRecoSequence 
+                           & hcalLocalRecoWithoutHO
                            & l1IsolatedPhotonHcalIsol 
                            & l1NonIsolatedPhotonHcalIsol 
 			   & hltL1NonIsoDoublePhotonHcalIsolFilter
