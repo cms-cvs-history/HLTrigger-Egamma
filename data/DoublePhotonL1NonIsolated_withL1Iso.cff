@@ -115,7 +115,7 @@ replace hltL1IsoDoublePhotonDoubleEtFilter.candTag =  hltL1IsoDoublePhotonTrackI
 
 
 
-  sequence doublePhotonL1NonIsolated = {#doL1T &
+  sequence doublePhotonL1NonIsolated = {doL1T &
                            l1seedRelaxedDouble
                            & ecalLocalRecoSequence 
                            & l1IsolatedEcalClusters
