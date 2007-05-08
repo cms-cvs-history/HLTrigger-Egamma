@@ -68,8 +68,8 @@ include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 module hltL1IsoDoubleElectronPixelMatchFilter = hltElectronPixelMatchFilter from "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 
   replace hltL1IsoDoubleElectronPixelMatchFilter.candTag = hltL1IsoDoubleElectronHcalIsolFilter
-  replace hltL1IsoDoubleElectronPixelMatchFilter.pixelmapbarrelTag = l1IsoElectronPixelSeeds:correctedHybridSuperClustersL1Isolated
-  replace hltL1IsoDoubleElectronPixelMatchFilter.pixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
+  replace hltL1IsoDoubleElectronPixelMatchFilter.L1IsoPixelmapbarrelTag = l1IsoElectronPixelSeeds:correctedHybridSuperClustersL1Isolated
+  replace hltL1IsoDoubleElectronPixelMatchFilter.L1IsoPixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
 #      double   npixelmatchcut         = 1
   replace hltL1IsoDoubleElectronPixelMatchFilter.ncandcut = 2
 

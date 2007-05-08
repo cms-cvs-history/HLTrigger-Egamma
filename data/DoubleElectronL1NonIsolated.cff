@@ -26,7 +26,7 @@
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
+#include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1NonIsoDoubleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
 
      replace hltL1NonIsoDoubleElectronL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
@@ -45,7 +45,7 @@ module hltL1NonIsoDoubleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRe
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
+#include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1NonIsoDoubleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
  replace hltL1NonIsoDoubleElectronEtFilter.inputTag = hltL1NonIsoDoubleElectronL1MatchFilterRegional
@@ -57,7 +57,7 @@ module hltL1NonIsoDoubleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Ega
 #--------------------------------------------------------------------#
 # HCAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
+#include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1NonIsoDoubleElectronHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
  replace hltL1NonIsoDoubleElectronHcalIsolFilter.candTag = hltL1NonIsoDoubleElectronEtFilter
@@ -71,12 +71,16 @@ module hltL1NonIsoDoubleElectronHcalIsolFilter = hltEgammaHcalIsolFilter from "H
 #--------------------------------------------------------------------#
 # PIXEL MATCH
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
+#include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 module hltL1NonIsoDoubleElectronPixelMatchFilter = hltElectronPixelMatchFilter from "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 
   replace hltL1NonIsoDoubleElectronPixelMatchFilter.candTag = hltL1NonIsoDoubleElectronHcalIsolFilter
-  replace hltL1NonIsoDoubleElectronPixelMatchFilter.pixelmapbarrelTag = l1IsoElectronPixelSeeds:correctedHybridSuperClustersL1Isolated
-  replace hltL1NonIsoDoubleElectronPixelMatchFilter.pixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
+  replace hltL1NonIsoDoubleElectronPixelMatchFilter.L1IsoPixelmapbarrelTag = l1IsoElectronPixelSeeds:correctedHybridSuperClustersL1Isolated
+  replace hltL1NonIsoDoubleElectronPixelMatchFilter.L1IsoPixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
+  replace hltL1NonIsoDoubleElectronPixelMatchFilter.L1NonIsoPixelmapbarrelTag = l1NonIsoElectronPixelSeeds:correctedHybridSuperClustersL1NonIsolated
+  replace hltL1NonIsoDoubleElectronPixelMatchFilter.L1NonIsoPixelmapendcapTag = l1NonIsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1NonIsolated
+
+replace hltL1NonIsoDoubleElectronPixelMatchFilter.doIsolated = false
 #      double   npixelmatchcut         = 1
   replace hltL1NonIsoDoubleElectronPixelMatchFilter.ncandcut = 2
 

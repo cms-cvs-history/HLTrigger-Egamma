@@ -4,8 +4,15 @@
 module hltDoubleElectronPixelMatchFilter = HLTElectronPixelMatchFilter {
 
       InputTag candTag                = hltDoubleElectronHcalIsolFilter
-      InputTag pixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
-      InputTag pixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
+     InputTag L1IsoPixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
+      InputTag L1IsoPixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
+
+      InputTag L1NonIsoPixelmapbarrelTag   = electronPixelSeeds:correctedL1NonIsoHybridSuperClusters
+      InputTag L1NonIsoPixelmapendcapTag   = electronPixelSeeds:correctedL1NonIsoEndcapSuperClustersWithPreshower
+      
+      bool doIsolated = true	
+ #     InputTag pixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
+ #     InputTag pixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
       double   npixelmatchcut         = 1
       int32    ncandcut               = 2
 }
