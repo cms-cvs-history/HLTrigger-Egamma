@@ -11,8 +11,9 @@
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoTrackingSequenceForHLT.cff"
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1NonIsoTrackingSequenceForHLT.cff"
 
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"	
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoEgammaRegionalRecoTracker.cff"	
+
+  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronsRegionalRecoTracker.cff"
+  include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoElectronsRegionalRecoTracker.cff"
 
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
  include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoElectronTrackIsol.cff"
@@ -152,8 +153,8 @@ replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
                            & pixelMatchElectronL1NonIsoTrackingSequenceForHLT
                            & hltL1NonIsoDoubleElectronEoverpFilter
                   ##### ckftracks & 
-                           & l1IsoEgammaRegionalRecoTracker
-                           & l1NonIsoEgammaRegionalRecoTracker
+                           & l1IsoElectronsRegionalRecoTracker
+                           & l1NonIsoElectronsRegionalRecoTracker
                   ##### EgammaHLTRegionalPixelSeedGeneratorProducer
                            & l1IsoElectronTrackIsol
                            & l1NonIsoElectronTrackIsol

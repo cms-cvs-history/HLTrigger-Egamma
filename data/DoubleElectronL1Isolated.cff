@@ -5,8 +5,8 @@
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoSequenceForHLT.cff"
  include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoTrackingSequenceForHLT.cff"
 
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"	
-
+ include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronsRegionalRecoTracker.cff"
+ 
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
 
 
@@ -127,7 +127,7 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
                              pixelMatchElectronL1IsoTrackingSequenceForHLT &
                              hltL1IsoDoubleElectronEoverpFilter &	
                              //ckftracks & 
-                             l1IsoEgammaRegionalRecoTracker & //// here the regional is obtained by
+                             l1IsoElectronsRegionalRecoTracker & //// here the regional is obtained by
                                                            /// EgammaHLTRegionalPixelSeedGeneratorProducer
                              l1IsoElectronTrackIsol & hltL1IsoDoubleElectronTrackIsolFilter &
                                                       
