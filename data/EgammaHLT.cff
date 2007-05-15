@@ -13,10 +13,10 @@
  # include "RecoEgamma/EgammaHLTProducers/data/hltDoubleRegionalRecoTracker.cff"
  # include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoubleRegionalRecoTracker.cff"
 
- include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
- include "HLTrigger/Configuration/data/common/CaloTowers.cff"
- include "HLTrigger/Configuration/data/common/LocalTracker.cff"
- include "HLTrigger/Configuration/data/common/TrackerTracks.cff"
+# include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
+# include "HLTrigger/Configuration/data/common/CaloTowers.cff"
+# include "HLTrigger/Configuration/data/common/LocalTracker.cff"
+# include "HLTrigger/Configuration/data/common/TrackerTracks.cff"
 
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
