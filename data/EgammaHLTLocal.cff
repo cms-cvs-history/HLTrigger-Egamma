@@ -40,7 +40,7 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
 
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"
 
- include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
+# include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
 
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"

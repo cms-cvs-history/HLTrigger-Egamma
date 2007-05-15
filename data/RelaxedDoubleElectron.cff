@@ -18,17 +18,18 @@
 
 
 
-  sequence relaxedDoubleElectron = {doL1T &
+  sequence relaxedDoubleElectron = {
+	                            #doL1T &
                                     l1seedRelaxedDouble &
 //                                  ecalLocalRecoSequence &
-                                    calolocalreco & // !
+                                     doLocalCalo & // !
                                     ecalClusters & 
                                     hltRecoEcalRelaxedDoubleCandidate &
                                     hltRelaxedDoubleL1MatchFilter &
                                     hltRelaxedDoubleElectronEtFilter &
 //                                  hcalLocalRecoSequence & 
                                     hltRelaxedDoubleElectronHcalIsol & hltRelaxedDoubleElectronHcalIsolFilter &
-                                    trackerlocalreco &
+                                    doLocalTracker &
 	                            pixelMatchElectronSequenceForHLT & hltRelaxedDoubleElectronPixelMatchFilter &
                                     pixelMatchElectronTrackingSequenceForHLT &
                                     ckftracks 

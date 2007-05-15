@@ -16,10 +16,11 @@
   }
 
 
-  sequence relaxedDoublePhoton = {doL1T &
+  sequence relaxedDoublePhoton = {
+                                  #doL1T &
                                   l1seedRelaxedDouble &
 //                                ecalLocalRecoSequence &
-                                  calolocalreco & // !
+                                  doLocalCalo & // !
                                   ecalClusters &
                                   hltRecoEcalRelaxedDoubleCandidate &
                                   hltRelaxedDoubleL1MatchFilter &
@@ -27,7 +28,7 @@
 	                          hltRelaxedDoublePhotonEcalIsol & hltRelaxedDoublePhotonEcalIsolFilter &
 //                                hcalLocalRecoSequence &
                                   hltRelaxedDoublePhotonHcalIsol & hltRelaxedDoublePhotonHcalIsolFilter &
-                                  trackerlocalreco &
+                                  doLocalTracker &
                                   ckftracks 
                                   //hltRelaxedDoubleRegionalCkfTracks
                                   & hltRelaxedDoublePhotonTrackIsol &hltRelaxedDoublePhotonTrackIsolFilter &

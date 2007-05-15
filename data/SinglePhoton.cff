@@ -17,10 +17,11 @@
 
 
 
-  sequence singlePhoton = {doL1T &
+  sequence singlePhoton = {
+                           #doL1T &
                            l1seedSingle & 
 //                         ecalLocalRecoSequence &
-                           calolocalreco & // !
+                           doLocalCalo & // !
                            ecalClusters &
                            hltRecoEcalSingleCandidate &
                            hltSingleL1MatchFilter &
@@ -28,7 +29,7 @@
 	                   hltSinglePhotonEcalIsol & hltSinglePhotonEcalIsolFilter &
 //                         hcalLocalRecoSequence &
                            hltSinglePhotonHcalIsol & hltSinglePhotonHcalIsolFilter &
-                           trackerlocalreco &
+                           doLocalTracker &
                            ckftracks 
                            //hltSingleRegionalCkfTracks
                            & hltSinglePhotonTrackIsol & hltSinglePhotonTrackIsolFilter &

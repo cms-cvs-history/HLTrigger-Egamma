@@ -17,10 +17,11 @@
          uint32 eventOffset    = 0
   }
 
-  sequence doublePhoton = {doL1T &
+  sequence doublePhoton = {
+                           #doL1T &
                            l1seedDouble &
 //                         ecalLocalRecoSequence &
-                           calolocalreco & // !
+                           doLocalCalo & // !
                            ecalClusters &
                            hltRecoEcalDoubleCandidate &
                            hltDoubleL1MatchFilter &
@@ -28,7 +29,7 @@
 	                   hltDoublePhotonEcalIsol & hltDoublePhotonEcalIsolFilter &
 //                         hcalLocalRecoSequence &
                            hltDoublePhotonHcalIsol & hltDoublePhotonHcalIsolFilter &
-                           trackerlocalreco &
+                           doLocalTracker &
                            ckftracks 
                            //hltDoubleRegionalCkfTracks
                            & hltDoublePhotonTrackIsol &hltDoublePhotonTrackIsolFilter &

@@ -105,21 +105,21 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 ### include "RecoLocalCalo/Configuration/data/RecoLocalCalo.cff"
 
   sequence singleElectronL1Isolated = { 
-                                      doL1T &
+                                      ##doL1T &
                              l1seedSingle &
-	                  ecalLocalRecoSequence &
+	                  doLocalEcal &
                                l1IsolatedEcalClusters &
                                l1IsoRecoEcalCandidate &
                              hltL1IsoSingleL1MatchFilter &
                              hltL1IsoSingleElectronEtFilter &
-                          hcalLocalRecoWithoutHO &
+                          doLocalHcalWithoutHO &
                                l1IsolatedElectronHcalIsol & 
                              hltL1IsoSingleElectronHcalIsolFilter &
                              ##### trackerlocalreco &              
-                          pixeltrackerlocalreco & // pixel rechit for SC-pixel matching
+                          doLocalPixel & // pixel rechit for SC-pixel matching
 	                       pixelMatchElectronL1IsoSequenceForHLT & 
                              hltL1IsoSingleElectronPixelMatchFilter &
-			  striptrackerlocalreco & // strip rechit for the electron tracking
+			  doLocalStrip & // strip rechit for the electron tracking
                                pixelMatchElectronL1IsoTrackingSequenceForHLT &
                              hltL1IsoSingleElectronEoverpFilter &	
                              //ckftracks & 

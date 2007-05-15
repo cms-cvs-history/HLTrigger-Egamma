@@ -116,10 +116,10 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
 
 
   sequence doubleElectronL1NonIsolated = { 
-                                        doL1T &
+                                        #doL1T &
                                         # was like thisl1seedDouble &
                                         l1seedRelaxedDouble &
-                               ecalLocalRecoSequence 
+                                        doLocalEcal	
                                       ##  calolocalreco & // !
                                       #  ecalClusters & 
 	                   &  l1IsolatedEcalClusters 
@@ -128,19 +128,19 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
                            & hltL1NonIsoDoubleElectronL1MatchFilterRegional
                            # hltL1IsoDoubleElectronL1MatchFilter
                            & hltL1IsoDoubleElectronEtFilter #attention Iso
-                           &  hcalLocalRecoWithoutHO 
+                           &  doLocalHcalWithoutHO
                            & l1IsolatedElectronHcalIsol 
                            & l1NonIsolatedElectronHcalIsol 
 
                            & hltL1IsoDoubleElectronHcalIsolFilter #attention Iso
 
                   ##### trackerlocalreco &   
-                           &   pixeltrackerlocalreco         
+                           &   doLocalPixel      
 	                   & pixelMatchElectronL1IsoSequenceForHLT
 	                   & pixelMatchElectronL1NonIsoSequenceForHLT
 
                            & hltL1IsoDoubleElectronPixelMatchFilter
-                           & striptrackerlocalreco
+                           & doLocalStrip
                            & pixelMatchElectronL1IsoTrackingSequenceForHLT
                            & pixelMatchElectronL1NonIsoTrackingSequenceForHLT
                            & hltL1IsoDoubleElectronEoverpFilter
