@@ -17,6 +17,7 @@
 
 
   sequence relaxedDoublePhoton = {
+                                  hltBegin&
                                   #doL1T &
                                   l1seedRelaxedDouble &
 //                                ecalLocalRecoSequence &

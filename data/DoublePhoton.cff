@@ -18,6 +18,7 @@
   }
 
   sequence doublePhoton = {
+	                   hltBegin&
                            #doL1T &
                            l1seedDouble &
 //                         ecalLocalRecoSequence &

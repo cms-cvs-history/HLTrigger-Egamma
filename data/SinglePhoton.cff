@@ -18,6 +18,7 @@
 
 
   sequence singlePhoton = {
+	                   hltBegin&
                            #doL1T &
                            l1seedSingle & 
 //                         ecalLocalRecoSequence &

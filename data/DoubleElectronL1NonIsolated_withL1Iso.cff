@@ -116,6 +116,7 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
 
 
   sequence doubleElectronL1NonIsolated = { 
+	                               hltBegin&
                                         #doL1T &
                                         # was like thisl1seedDouble &
                                         l1seedRelaxedDouble &

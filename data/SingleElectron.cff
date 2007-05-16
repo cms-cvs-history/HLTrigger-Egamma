@@ -16,6 +16,7 @@
 
 
   sequence singleElectron = {
+	                     hltBegin&
 	                     #doL1T &
                              l1seedSingle &
 //                           ecalLocalRecoSequence &

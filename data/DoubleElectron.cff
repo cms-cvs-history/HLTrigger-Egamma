@@ -17,6 +17,7 @@
 
 
   sequence doubleElectron = {
+			     hltBegin&
                              #doL1T &
                              l1seedDouble &
 //                           ecalLocalRecoSequence &

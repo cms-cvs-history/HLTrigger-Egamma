@@ -109,6 +109,7 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
 
 
   sequence doubleElectronL1Isolated = { 
+	                               hltBegin&
                         ##              doL1T &
                                         l1seedDouble &
                              doLocalEcal & 

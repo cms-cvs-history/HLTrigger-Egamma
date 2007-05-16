@@ -126,6 +126,7 @@ replace hltL1NonIsoDoublePhotonDoubleEtFilter.candTag =  hltL1NonIsoDoublePhoton
 
 
   sequence doublePhotonL1NonIsolated = {
+			   hltBegin&
                            #doL1T &
                            l1seedRelaxedDouble
                            & doLocalEcal

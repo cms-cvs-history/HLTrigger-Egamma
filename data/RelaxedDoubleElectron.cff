@@ -19,6 +19,7 @@
 
 
   sequence relaxedDoubleElectron = {
+                                    hltBegin&
 	                            #doL1T &
                                     l1seedRelaxedDouble &
 //                                  ecalLocalRecoSequence &

@@ -104,7 +104,8 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 ### include "RecoLocalTracker/Configuration/data/RecoLocalTracker.cff"
 ### include "RecoLocalCalo/Configuration/data/RecoLocalCalo.cff"
 
-  sequence singleElectronL1Isolated = { 
+  sequence singleElectronL1Isolated = {
+	                           hltBegin& 
                                       ##doL1T &
                              l1seedSingle &
 	                  doLocalEcal &

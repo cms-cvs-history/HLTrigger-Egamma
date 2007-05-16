@@ -125,6 +125,7 @@ replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
 
 
   sequence doubleElectronL1NonIsolated = { 
+ 					hltBegin&
                                        # doL1T &
                                         # was like thisl1seedDouble &
                                         l1seedRelaxedDouble &
