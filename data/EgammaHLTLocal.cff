@@ -70,7 +70,7 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
 
 
   module l1seedRelaxedDouble = HLTLevel1Seed {
-         vstring L1Seeds = {"A_DoubleEG20"}
+         vstring L1Seeds = {"A_DoubleEG15"}
          bool andOr = true
          bool byName= true
          InputTag L1ExtraCollections = l1extraParticles
