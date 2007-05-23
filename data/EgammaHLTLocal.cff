@@ -1,13 +1,7 @@
-
  
  include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
 
-
-
-
-
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
-
 
 # include "RecoEcal/Configuration/data/RecoEcal.cff"
  include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedEcalSuperClusters.cff"
@@ -58,7 +52,6 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
          InputTag L1GTReadoutRecord  = l1extraParticleMap
         }
 
-
   module l1seedDouble = HLTLevel1Seed {
          vstring L1Seeds = {"A_DoubleIsoEG10"}
          bool andOr = true
@@ -68,7 +61,6 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
          InputTag L1GTReadoutRecord  = l1extraParticleMap
         }
 
-
   module l1seedRelaxedDouble = HLTLevel1Seed {
          vstring L1Seeds = {"A_DoubleEG15"}
          bool andOr = true
@@ -77,25 +69,3 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
          InputTag L1ExtraParticleMap = l1extraParticleMap
          InputTag L1GTReadoutRecord  = l1extraParticleMap
         }
-
-
-
-  module l1seedMarcoSingle = L1TriggerFilter {
-    untracked double SingleTriggerThr = 22.9 
-    untracked double DoubleTriggerThr = 999.
-    untracked double IsoDoubleTriggerThr = 999.
-  }
-
-  module l1seedMarcoDouble = L1TriggerFilter {
-    untracked double SingleTriggerThr = 999. 
-    untracked double DoubleTriggerThr = 18.9
-    untracked double IsoDoubleTriggerThr = 999.
-  }
-
-  module l1seedMarcoRelaxedDouble = L1TriggerFilter {
-    untracked double SingleTriggerThr = 999. 
-    untracked double DoubleTriggerThr = 999.
-    untracked double IsoDoubleTriggerThr = 11.9
-  }
-
-
