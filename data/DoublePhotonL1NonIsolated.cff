@@ -110,7 +110,6 @@ include "HLTrigger/Egamma/data/hltEgammaDoubleEtFilter.cfi"
 module hltL1NonIsoDoublePhotonDoubleEtFilter = hltEgammaDoubleEtFilter from "HLTrigger/Egamma/data/hltEgammaDoubleEtFilter.cfi"
 
 replace hltL1NonIsoDoublePhotonDoubleEtFilter.candTag =  hltL1NonIsoDoublePhotonTrackIsolFilter
-replace hltL1NonIsoDoublePhotonDoubleEtFilter.etcut1 = 20.0 
 #      double etcut1 = 30.0
 #      double etcut2 = 20.0
 #      int32  npaircut = 1
