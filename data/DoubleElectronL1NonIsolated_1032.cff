@@ -52,7 +52,6 @@ module hltL1NonIsoDoubleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Ega
  replace hltL1NonIsoDoubleElectronEtFilter.inputTag = hltL1NonIsoDoubleElectronL1MatchFilterRegional
  #replace hltL1IsoDoubleElectronEtFilter.inputTag = hltL1IsoDoubleElectronL1MatchFilter
  replace hltL1NonIsoDoubleElectronEtFilter.etcut = 12.0
-# replace hltL1NonIsoDoubleElectronEtFilter.etcut = 19.0
  replace hltL1NonIsoDoubleElectronEtFilter.ncandcut = 2
 
 
