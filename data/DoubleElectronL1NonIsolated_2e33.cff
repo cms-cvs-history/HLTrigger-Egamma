@@ -129,7 +129,8 @@ replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
                                        # doL1T &
                                         # was like thisl1seedDouble &
                                         l1seedRelaxedDouble &
-                             doLocalEcal &
+		 doRegionalEgammaEcal &
+#                             doLocalEcal &
                              l1IsolatedEcalClusters 
 			   & l1NonIsolatedEcalClusters 
                            & l1IsoRecoEcalCandidate 

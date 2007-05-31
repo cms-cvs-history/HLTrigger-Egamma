@@ -108,7 +108,8 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 	                           hltBegin& 
                                       ##doL1T &
                              l1seedSingle &
-	                  doLocalEcal &
+		 doRegionalEgammaEcal &
+#	                  doLocalEcal &
                                l1IsolatedEcalClusters &
                                l1IsoRecoEcalCandidate &
                              hltL1IsoSingleL1MatchFilter &

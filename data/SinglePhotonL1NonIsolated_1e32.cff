@@ -108,8 +108,8 @@ replace  hltL1NonIsoSinglePhotonTrackIsolFilter.doIsolated = false
 	                   hltBegin&
                            ##doL1T &
                            l1seedRelaxedSingle &
- 
-		           doLocalEcal &
+ 		           doRegionalEgammaEcal &
+# 		           doLocalEcal &
                            l1IsolatedEcalClusters  &
                            l1NonIsolatedEcalClusters  &
                            l1IsoRecoEcalCandidate &

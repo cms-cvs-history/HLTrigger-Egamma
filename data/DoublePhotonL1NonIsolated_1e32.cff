@@ -130,7 +130,9 @@ replace hltL1NonIsoDoublePhotonDoubleEtFilter.etcut1 = 20.0
 			   hltBegin&
                            #doL1T &
                            l1seedRelaxedDouble
-                           & doLocalEcal
+                           & 
+		           doRegionalEgammaEcal
+#doLocalEcal
                            & l1IsolatedEcalClusters
 			   & l1NonIsolatedEcalClusters
                            & l1IsoRecoEcalCandidate

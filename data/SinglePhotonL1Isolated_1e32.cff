@@ -91,7 +91,8 @@ replace  hltL1IsoSinglePhotonTrackIsolFilter.isoTag   = l1IsoPhotonTrackIsol
 	                   hltBegin&
                            ##doL1T &
                            l1seedSingle & 
-		           doLocalEcal &
+		           doRegionalEgammaEcal &
+# 		           doLocalEcal &
                            l1IsolatedEcalClusters  &
                            l1IsoRecoEcalCandidate &
                            hltL1IsoSinglePhotonL1MatchFilter &

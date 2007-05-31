@@ -50,7 +50,7 @@ module hltL1NonIsoSingleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Ega
 
  replace hltL1NonIsoSingleElectronEtFilter.inputTag = hltL1NonIsoSingleElectronL1MatchFilterRegional
  #replace hltL1IsoSingleElectronEtFilter.inputTag = hltL1IsoSingleElectronL1MatchFilter
- replace hltL1NonIsoSingleElectronEtFilter.etcut = 17.0
+ replace hltL1NonIsoSingleElectronEtFilter.etcut = 22.0
  replace hltL1NonIsoSingleElectronEtFilter.ncandcut = 1
 
 #--------------------------------------------------------------------#
@@ -128,7 +128,8 @@ replace  hltL1NonIsoSingleElectronTrackIsolFilter.doIsolated = false
 	                           hltBegin& 
                                       ##doL1T &
                              l1seedRelaxedSingle &
-	                  doLocalEcal &
+		           doRegionalEgammaEcal &
+#	                  doLocalEcal &
                                l1IsolatedEcalClusters &
                                l1NonIsolatedEcalClusters &
                                l1IsoRecoEcalCandidate &

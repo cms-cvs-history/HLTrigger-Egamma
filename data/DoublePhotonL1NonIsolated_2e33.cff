@@ -129,7 +129,8 @@ replace hltL1NonIsoDoublePhotonDoubleEtFilter.candTag =  hltL1NonIsoDoublePhoton
 			   hltBegin&
                            #doL1T &
                            l1seedRelaxedDouble
-                           & doLocalEcal
+		& doRegionalEgammaEcal
+#                           & doLocalEcal
                            & l1IsolatedEcalClusters
 			   & l1NonIsolatedEcalClusters
                            & l1IsoRecoEcalCandidate

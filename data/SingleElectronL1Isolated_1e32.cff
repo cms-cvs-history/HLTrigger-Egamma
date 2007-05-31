@@ -38,7 +38,7 @@ include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1IsoSingleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
  replace hltL1IsoSingleElectronEtFilter.inputTag = hltL1IsoSingleL1MatchFilter
- replace hltL1IsoSingleElectronEtFilter.etcut = 14.0
+ replace hltL1IsoSingleElectronEtFilter.etcut = 18.0
 #      int32  ncandcut = 1
 
 
@@ -108,7 +108,8 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 	                           hltBegin& 
                                       ##doL1T &
                              l1seedSingle &
-	                  doLocalEcal &
+		           doRegionalEgammaEcal &
+#	                  doLocalEcal &
                                l1IsolatedEcalClusters &
                                l1IsoRecoEcalCandidate &
                              hltL1IsoSingleL1MatchFilter &

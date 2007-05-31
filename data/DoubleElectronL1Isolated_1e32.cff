@@ -112,7 +112,8 @@ replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
 	                               hltBegin&
                         ##              doL1T &
                                         l1seedDouble &
-                             doLocalEcal & 
+		           doRegionalEgammaEcal &
+#                             doLocalEcal & 
 	                     l1IsolatedEcalClusters &
                              l1IsoRecoEcalCandidate &
                              #hltL1IsoDoubleElectronL1MatchFilter &

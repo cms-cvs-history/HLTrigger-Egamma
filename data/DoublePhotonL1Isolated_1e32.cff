@@ -117,7 +117,8 @@ replace hltL1IsoDoublePhotonDoubleEtFilter.etcut1 = 20.0
 			  hltBegin&
 	                   #doL1T &
                            l1seedDouble &
-                           doLocalEcal &
+		           doRegionalEgammaEcal &
+#                           doLocalEcal &
                            l1IsolatedEcalClusters  &
                            l1IsoRecoEcalCandidate &
                            #hltL1IsoDoublePhotonL1MatchFilter &
