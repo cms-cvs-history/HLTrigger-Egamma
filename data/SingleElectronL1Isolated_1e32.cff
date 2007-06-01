@@ -38,7 +38,7 @@ include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1IsoSingleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
  replace hltL1IsoSingleElectronEtFilter.inputTag = hltL1IsoSingleL1MatchFilter
- replace hltL1IsoSingleElectronEtFilter.etcut = 18.0
+ replace hltL1IsoSingleElectronEtFilter.etcut = 15.0
 #      int32  ncandcut = 1
 
 

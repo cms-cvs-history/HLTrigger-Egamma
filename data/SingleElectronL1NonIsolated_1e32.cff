@@ -50,7 +50,7 @@ module hltL1NonIsoSingleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Ega
 
  replace hltL1NonIsoSingleElectronEtFilter.inputTag = hltL1NonIsoSingleElectronL1MatchFilterRegional
  #replace hltL1IsoSingleElectronEtFilter.inputTag = hltL1IsoSingleElectronL1MatchFilter
- replace hltL1NonIsoSingleElectronEtFilter.etcut = 22.0
+ replace hltL1NonIsoSingleElectronEtFilter.etcut = 18.0
  replace hltL1NonIsoSingleElectronEtFilter.ncandcut = 1
 
 #--------------------------------------------------------------------#
@@ -81,7 +81,7 @@ module hltL1NonIsoSingleElectronPixelMatchFilter = hltElectronPixelMatchFilter f
 
 replace hltL1NonIsoSingleElectronPixelMatchFilter.doIsolated = false
 #      double   npixelmatchcut         = 1
-  replace hltL1NonIsoSingleElectronPixelMatchFilter.ncandcut = 2
+  replace hltL1NonIsoSingleElectronPixelMatchFilter.ncandcut = 1
 
 #--------------------------------------------------------------------#
 # E OVER P !! HERE is not applyed and it is used to change 
