@@ -86,7 +86,7 @@ module hltL1IsoDoublePhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrig
 
 replace  hltL1IsoDoublePhotonTrackIsolFilter.candTag  = hltL1IsoDoublePhotonHcalIsolFilter
 replace  hltL1IsoDoublePhotonTrackIsolFilter.isoTag   = l1IsoPhotonTrackIsol
-replace  hltL1IsoDoublePhotonTrackIsolFilter.numtrackisolcut = 3
+replace  hltL1IsoDoublePhotonTrackIsolFilter.numtrackisolcut = 3000
 replace  hltL1IsoDoublePhotonTrackIsolFilter.ncandcut = 2
 
 #--------------------------------------------------------------------#
