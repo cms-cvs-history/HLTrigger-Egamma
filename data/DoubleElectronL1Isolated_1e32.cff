@@ -94,7 +94,7 @@ module hltL1IsoDoubleElectronPixelMatchFilter = hltElectronPixelMatchFilter from
 
 replace  hltL1IsoDoubleElectronTrackIsolFilter.candTag  = hltL1IsoDoubleElectronEoverpFilter
 replace  hltL1IsoDoubleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
-replace  hltL1IsoDoubleElectronTrackIsolFilter.pttrackisolcut = 4000
+replace  hltL1IsoDoubleElectronTrackIsolFilter.pttrackisolcut = 0.4
 replace  hltL1IsoDoubleElectronTrackIsolFilter.ncandcut         = 2
 
 #--------------------------------------------------------------------#

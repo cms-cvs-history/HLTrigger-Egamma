@@ -89,7 +89,7 @@ module hltL1NonIsoSinglePhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLT
 replace  hltL1NonIsoSinglePhotonTrackIsolFilter.candTag  = hltL1NonIsoSinglePhotonHcalIsolFilter
 replace  hltL1NonIsoSinglePhotonTrackIsolFilter.isoTag   = l1IsoPhotonTrackIsol
 replace  hltL1NonIsoSinglePhotonTrackIsolFilter.nonIsoTag  = l1NonIsoPhotonTrackIsol
-replace  hltL1NonIsoSinglePhotonTrackIsolFilter.numtrackisolcut = 3
+replace  hltL1NonIsoSinglePhotonTrackIsolFilter.numtrackisolcut = 1
 replace  hltL1NonIsoSinglePhotonTrackIsolFilter.ncandcut = 1
 replace  hltL1NonIsoSinglePhotonTrackIsolFilter.doIsolated = false
 
