@@ -109,7 +109,7 @@ replace hltL1NonIsoDoubleElectronPixelMatchFilter.doIsolated = false
 replace  hltL1NonIsoDoubleElectronTrackIsolFilter.candTag  = hltL1NonIsoDoubleElectronEoverpFilter
 replace  hltL1NonIsoDoubleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 replace  hltL1NonIsoDoubleElectronTrackIsolFilter.nonIsoTag  = l1NonIsoElectronTrackIsol
-replace  hltL1NonIsoDoubleElectronTrackIsolFilter.pttrackisolcut = 4000
+replace  hltL1NonIsoDoubleElectronTrackIsolFilter.pttrackisolcut = 0.4
 replace  hltL1NonIsoDoubleElectronTrackIsolFilter.ncandcut         = 2
 replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
 
