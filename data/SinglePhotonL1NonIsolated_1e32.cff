@@ -50,7 +50,7 @@ module hltL1NonIsoSinglePhotonEtFilter = hltEgammaEtFilter from "HLTrigger/Egamm
 
 #replace hltL1NonIsoSinglePhotonEtFilter.inputTag = hltL1NonIsoSinglePhotonL1MatchFilter
 replace hltL1NonIsoSinglePhotonEtFilter.inputTag = hltL1NonIsoSinglePhotonL1MatchFilterRegional
-replace hltL1NonIsoSinglePhotonEtFilter.etcut = 60.0
+replace hltL1NonIsoSinglePhotonEtFilter.etcut = 50.0
 replace hltL1NonIsoSinglePhotonEtFilter.ncandcut = 1
 
 #--------------------------------------------------------------------#
