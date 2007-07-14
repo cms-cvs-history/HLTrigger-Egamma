@@ -1,14 +1,116 @@
 
- include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalDoubleCandidate.cfi"
- include "RecoEgamma/EgammaHLTProducers/data/hltDoubleElectronHcalIsol.cfi"
- include "RecoEgamma/EgammaHLTProducers/data/hltDoubleElectronTrackIsol.cfi"
- include "HLTrigger/Egamma/data/hltDoubleElectronEtFilter.cfi"
- include "HLTrigger/Egamma/data/hltDoubleElectronHcalIsolFilter.cfi"
- include "HLTrigger/Egamma/data/hltDoubleElectronPixelMatchFilter.cfi"
- include "HLTrigger/Egamma/data/hltDoubleElectronTrackIsolFilter.cfi"
- include "HLTrigger/Egamma/data/hltZeePMMassFilter.cfi"
+ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
+ include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
+ 
+ include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoSequenceForHLT.cff"
+ include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoTrackingSequenceForHLT.cff"
 
-  module ZeeCounterPresc = HLTPrescaler {
+ include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronsRegionalRecoTracker.cff"
+ 
+ include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
+
+
+### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronHcalIsol.cfi"
+### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronTrackIsol.cfi"
+
+#----------- filter modules for the sequence --------------------------------#
+
+#--------------------------------------------------------------------#
+# L1 MATCH
+#--------------------------------------------------------------------#
+include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
+module hltL1IsoDoubleElectronZeeL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
+#module hltL1IsoDoubleElectronZeeL1MatchFilter = hltEgammaL1MatchFilter from "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi" 
+
+#     replace hltL1IsoDoubleElectronZeeL1MatchFilter.candTag = l1IsoRecoEcalCandidate
+     replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
+
+#     InputTag l1Tag = l1extraParticles:Isolated
+     #replace hltL1IsoDoubleElectronZeeL1MatchFilter.ncandcut = 2
+     replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.ncandcut = 2
+     replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.doIsolated = true
+#
+#      double region_eta_size      = 0.522
+#      double region_eta_size_ecap = 0.87
+#      double region_phi_size      = 1.044
+#      double barrel_end           = 1.4791
+#      double endcap_end           = 2.5
+
+#--------------------------------------------------------------------#
+# ET CUT
+#--------------------------------------------------------------------#
+include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
+module hltL1IsoDoubleElectronZeeEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
+
+ #replace hltL1IsoDoubleElectronZeeEtFilter.inputTag = hltL1IsoDoubleElectronZeeL1MatchFilter
+ replace hltL1IsoDoubleElectronZeeEtFilter.inputTag = hltL1IsoDoubleElectronZeeL1MatchFilterRegional
+
+ replace hltL1IsoDoubleElectronZeeEtFilter.etcut = 10.0
+ replace hltL1IsoDoubleElectronZeeEtFilter.ncandcut = 2
+
+
+#--------------------------------------------------------------------#
+# HCAL ISOL
+#--------------------------------------------------------------------#
+include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
+module hltL1IsoDoubleElectronZeeHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
+
+ replace hltL1IsoDoubleElectronZeeHcalIsolFilter.candTag = hltL1IsoDoubleElectronZeeEtFilter
+ replace hltL1IsoDoubleElectronZeeHcalIsolFilter.isoTag = l1IsolatedElectronHcalIsol
+ replace hltL1IsoDoubleElectronZeeHcalIsolFilter.hcalisolbarrelcut = 9.
+ replace hltL1IsoDoubleElectronZeeHcalIsolFilter.hcalisolendcapcut = 9.
+ replace hltL1IsoDoubleElectronZeeHcalIsolFilter.ncandcut = 2
+
+#--------------------------------------------------------------------#
+# PIXEL MATCH
+#--------------------------------------------------------------------#
+include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
+module hltL1IsoDoubleElectronZeePixelMatchFilter = hltElectronPixelMatchFilter from "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
+
+  replace hltL1IsoDoubleElectronZeePixelMatchFilter.candTag = hltL1IsoDoubleElectronZeeHcalIsolFilter
+  replace hltL1IsoDoubleElectronZeePixelMatchFilter.L1IsoPixelmapbarrelTag = l1IsoElectronPixelSeeds:correctedHybridSuperClustersL1Isolated
+  replace hltL1IsoDoubleElectronZeePixelMatchFilter.L1IsoPixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
+#      double   npixelmatchcut         = 1
+  replace hltL1IsoDoubleElectronZeePixelMatchFilter.ncandcut = 2
+
+#--------------------------------------------------------------------#
+# E OVER P !! HERE is not applyed and it is used to change 
+#       the HLTFilterObjectWithRefs from RecoEcalCandidates to Electron
+#--------------------------------------------------------------------#
+ include "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
+ module hltL1IsoDoubleElectronZeeEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
+
+ replace hltL1IsoDoubleElectronZeeEoverpFilter.candTag = hltL1IsoDoubleElectronZeePixelMatchFilter
+ replace hltL1IsoDoubleElectronZeeEoverpFilter.electronIsolatedProducer = pixelMatchElectronsL1IsoForHLT 
+  replace hltL1IsoDoubleElectronZeeEoverpFilter.eoverpbarrelcut = 15000
+  replace hltL1IsoDoubleElectronZeeEoverpFilter.eoverpendcapcut = 24500
+  replace hltL1IsoDoubleElectronZeeEoverpFilter.ncandcut = 2
+
+#--------------------------------------------------------------------#
+# TRACK ISOL
+#--------------------------------------------------------------------#
+ include "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
+ module hltL1IsoDoubleElectronZeeTrackIsolFilter = hltElectronTrackIsolFilter from "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
+
+replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.candTag  = hltL1IsoDoubleElectronZeeEoverpFilter
+replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
+replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.pttrackisolcut = 0.4
+replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.ncandcut         = 2
+
+#--------------------------------------------------------------------#
+# INV MASS
+#--------------------------------------------------------------------#
+ include "HLTrigger/Egamma/data/hltZeePMMassFilter.cfi"
+ module hltL1IsoDoubleElectronZeePMMassFilter = hltZeePMMassFilter from "HLTrigger/Egamma/data/hltZeePMMassFilter.cfi"
+ replace  hltL1IsoDoubleElectronZeePMMassFilter.candTag  = hltL1IsoDoubleElectronZeeTrackIsolFilter
+ replace  hltL1IsoDoubleElectronZeePMMassFilter.lowerMassCut = 54.22
+ replace  hltL1IsoDoubleElectronZeePMMassFilter.upperMassCut = 99999.9
+ replace  hltL1IsoDoubleElectronZeePMMassFilter.nZcandcut = 1
+
+#--------------------------------------------------------------------#
+#--------------------------------------------------------------------#
+
+  module zeeCounterPresc = HLTPrescaler {
          bool   makeFilterObject = true
          uint32 prescaleFactor = 1
          uint32 eventOffset    = 0
@@ -16,25 +118,36 @@
 
 
 
-
-  sequence zeeCounter = {
-			     hltBegin&
-                             #doL1T &
-                             l1seedDouble &
-//                           ecalLocalRecoSequence &
-                             doLocalCalo & // !
-                             ecalClusters &
-                             hltRecoEcalDoubleCandidate &
-                             hltDoubleL1MatchFilter &
-                             hltDoubleElectronEtFilter &
-//                           hcalLocalRecoSequence & 
-                             hltDoubleElectronHcalIsol & hltDoubleElectronHcalIsolFilter &
-                             doLocalTracker &
-	                     pixelMatchElectronSequenceForHLT & hltDoubleElectronPixelMatchFilter &
-                             pixelMatchElectronTrackingSequenceForHLT &
-                             ckftracks 
-                             //hltDoubleRegionalCkfTracks
-                             &hltDoubleElectronTrackIsol &hltDoubleElectronTrackIsolFilter &
-			     hltZeePMMassFilter &
-                             ZeeCounterPresc
+  sequence zeeCounter = { 
+	                               hltBegin&
+                        ##              doL1T &
+                                        l1seedDouble &
+		           doRegionalEgammaEcal &
+#                             doLocalEcal & 
+	                     l1IsolatedEcalClusters &
+                             l1IsoRecoEcalCandidate &
+                             #hltL1IsoDoubleElectronZeeL1MatchFilter &
+			     hltL1IsoDoubleElectronZeeL1MatchFilterRegional &
+                             hltL1IsoDoubleElectronZeeEtFilter &
+                             doLocalHcalWithoutHO &
+                             l1IsolatedElectronHcalIsol & hltL1IsoDoubleElectronZeeHcalIsolFilter &
+                             ##### trackerlocalreco &              
+  			     doLocalPixel &
+	                     pixelMatchElectronL1IsoSequenceForHLT & 
+                             hltL1IsoDoubleElectronZeePixelMatchFilter &
+                             doLocalStrip  & 
+                             pixelMatchElectronL1IsoTrackingSequenceForHLT &
+                             hltL1IsoDoubleElectronZeeEoverpFilter &	
+                             //ckftracks & 
+                             l1IsoElectronsRegionalRecoTracker & //// here the regional is obtained by
+                                                           /// EgammaHLTRegionalPixelSeedGeneratorProducer
+                             l1IsoElectronTrackIsol & hltL1IsoDoubleElectronZeeTrackIsolFilter &
+                             hltL1IsoDoubleElectronZeePMMassFilter &                         
+                             zeeCounterPresc
                             }
+
+
+
+
+
+
