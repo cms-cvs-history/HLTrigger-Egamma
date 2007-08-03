@@ -109,7 +109,7 @@ replace  hltL1IsoDoubleExclElectronTrackIsolFilter.ncandcut         = 2
 			     doLocalStrip  & 
                              pixelMatchElectronL1IsoTrackingSequenceForHLT &
                              hltL1IsoDoubleExclElectronEoverpFilter &	
-                             l1IsoEgammaRegionalRecoTracker & //// here the regional is obtained by
+                             l1IsoElectronsRegionalRecoTracker & //// here the regional is obtained by
                                                            /// EgammaHLTRegionalPixelSeedGeneratorProducer
                              l1IsoElectronTrackIsol & 
 			     hltL1IsoDoubleExclElectronTrackIsolFilter &                                                      
