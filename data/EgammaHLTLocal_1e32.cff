@@ -87,3 +87,12 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
          InputTag L1ExtraParticleMap = l1extraParticleMap 
          InputTag L1GTReadoutRecord  = l1extraParticleMap 
   } 
+
+  module l1seedSinglePrescaled = HLTLevel1Seed {
+         vstring L1Seeds = {"L1_SingleIsoEG10"}
+         bool andOr = true
+         bool byName= true
+         InputTag L1ExtraCollections = l1extraParticles
+         InputTag L1ExtraParticleMap = l1extraParticleMap
+         InputTag L1GTReadoutRecord  = l1extraParticleMap
+        }
