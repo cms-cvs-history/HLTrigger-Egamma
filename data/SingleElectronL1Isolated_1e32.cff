@@ -66,19 +66,34 @@ module hltL1IsoSingleElectronPixelMatchFilter = hltElectronPixelMatchFilter from
 #      double   npixelmatchcut         = 1
 #      int32    ncandcut               = 1
 
-#--------------------------------------------------------------------#
-# E OVER P
-#--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
- module hltL1IsoSingleElectronEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
+## #--------------------------------------------------------------------#
+## # E OVER P
+## #--------------------------------------------------------------------#
+##  include "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
+##  module hltL1IsoSingleElectronEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
+## 
+##  replace hltL1IsoSingleElectronEoverpFilter.candTag = hltL1IsoSingleElectronPixelMatchFilter
+##  replace hltL1IsoSingleElectronEoverpFilter.electronIsolatedProducer = pixelMatchElectronsL1IsoForHLT 
+## replace hltL1IsoSingleElectronEoverpFilter.doIsolated = true
+## 
+## #      double eoverpbarrelcut = 1.5
+## #      double eoverpendcapcut = 2.45
+## #      int32 ncandcut = 1
 
- replace hltL1IsoSingleElectronEoverpFilter.candTag = hltL1IsoSingleElectronPixelMatchFilter
- replace hltL1IsoSingleElectronEoverpFilter.electronIsolatedProducer = pixelMatchElectronsL1IsoForHLT 
-replace hltL1IsoSingleElectronEoverpFilter.doIsolated = true
+ #--------------------------------------------------------------------#
+ # 1/E - 1/P
+ #--------------------------------------------------------------------#
+ module hltL1IsoSingleElectronHOneOEMinusOneOPFilter = hltElectronOneOEMinusOneOPFilter from "HLTrigger/Egamma/data/hltElectronOneOEMinusOneOPFilter.cfi"
 
-#      double eoverpbarrelcut = 1.5
-#      double eoverpendcapcut = 2.45
-#      int32 ncandcut = 1
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.candTag =  hltL1IsoSingleElectronPixelMatchFilter
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.electronIsolatedProducer = pixelMatchElectronsL1IsoForHLT
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.electronNonIsolatedProducer = pixelMatchElectronsL1NonIsoForHLT
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.barrelcut = 999.03
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.endcapcut = 999.03
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.ncandcut = 1
+  replace hltL1IsoSingleElectronHOneOEMinusOneOPFilter.doIsolated = true
+
+ 
 
 #--------------------------------------------------------------------#
 # TRACK ISOL
@@ -86,7 +101,8 @@ replace hltL1IsoSingleElectronEoverpFilter.doIsolated = true
  include "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
  module hltL1IsoSingleElectronTrackIsolFilter = hltElectronTrackIsolFilter from "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
 
-replace  hltL1IsoSingleElectronTrackIsolFilter.candTag  = hltL1IsoSingleElectronEoverpFilter
+#replace  hltL1IsoSingleElectronTrackIsolFilter.candTag  = hltL1IsoSingleElectronEoverpFilter
+replace  hltL1IsoSingleElectronTrackIsolFilter.candTag  = hltL1IsoSingleElectronHOneOEMinusOneOPFilter
 replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 #      double pttrackisolcut = 0.06
 #      int32 ncandcut         = 1
@@ -105,29 +121,26 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
 ### include "RecoLocalCalo/Configuration/data/RecoLocalCalo.cff"
 
   sequence singleElectronL1Isolated = {
-	                           hltBegin& 
-                                      ##doL1T &
+	                     hltBegin& 
                              l1seedSingle &
-		           doRegionalEgammaEcal &
-#	                  doLocalEcal &
-                               l1IsolatedEcalClusters &
-                               l1IsoRecoEcalCandidate &
+		              doRegionalEgammaEcal &
+                              l1IsolatedEcalClusters &
+                              l1IsoRecoEcalCandidate &
                              hltL1IsoSingleL1MatchFilter &
                              hltL1IsoSingleElectronEtFilter &
-                          doLocalHcalWithoutHO &
-                               l1IsolatedElectronHcalIsol & 
+                              doLocalHcalWithoutHO &
+                              l1IsolatedElectronHcalIsol & 
                              hltL1IsoSingleElectronHcalIsolFilter &
-                             ##### trackerlocalreco &              
-                          doLocalPixel & // pixel rechit for SC-pixel matching
-	                       pixelMatchElectronL1IsoSequenceForHLT & 
+                              doLocalPixel & // pixel rechit for SC-pixel matching
+	                      pixelMatchElectronL1IsoSequenceForHLT & 
                              hltL1IsoSingleElectronPixelMatchFilter &
-			  doLocalStrip & // strip rechit for the electron tracking
-                               pixelMatchElectronL1IsoTrackingSequenceForHLT &
-                             hltL1IsoSingleElectronEoverpFilter &	
-                             //ckftracks & 
-                               l1IsoElectronsRegionalRecoTracker & //// here the regional is obtained by
+			      doLocalStrip & // strip rechit for the electron tracking
+                              pixelMatchElectronL1IsoTrackingSequenceForHLT &
+                             ////hltL1IsoSingleElectronEoverpFilter &	
+	                     hltL1IsoSingleElectronHOneOEMinusOneOPFilter &
+                              l1IsoElectronsRegionalRecoTracker & //// here the regional is obtained by
                                                            /// EgammaHLTRegionalPixelSeedGeneratorProducer
-                               l1IsoElectronTrackIsol & 
+                              l1IsoElectronTrackIsol & 
                              hltL1IsoSingleElectronTrackIsolFilter &
                                                       
                              singleElectronL1IsoPresc
