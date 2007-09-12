@@ -2,7 +2,7 @@
 # producer for hltSingleEMHOEFilster
 #
 module hltSinlgeEMHOEFilter =  HLTEgammaHOEFilter {
-      InputTag candTag = hltL1NonIsoSinglePhotonEMHighEtEtFilter
+      InputTag candTag = hltL1NonIsoSingleEMHighEtEcalIsolFilter
       InputTag isoTag  = l1IsolatedElectronHcalIsol
       InputTag nonIsoTag  = l1NonIsolatedElectronHcalIsol
       double hcalisolbarrelcut = 0.05

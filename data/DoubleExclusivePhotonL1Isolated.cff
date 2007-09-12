@@ -38,7 +38,7 @@ replace hltL1IsoDoubleExclPhotonEcalIsolFilter.ncandcut = 2
 include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1IsoDoubleExclPhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
- replace hltL1IsoDoubleExclPhotonHcalIsolFilter.candTag = hltL1IsoDoubleExclPhotonEtPhiFilter
+ replace hltL1IsoDoubleExclPhotonHcalIsolFilter.candTag = hltL1IsoDoubleExclPhotonEcalIsolFilter
  replace hltL1IsoDoubleExclPhotonHcalIsolFilter.isoTag = l1IsolatedPhotonHcalIsol
  replace hltL1IsoDoubleExclPhotonHcalIsolFilter.hcalisolbarrelcut = 8.
  replace hltL1IsoDoubleExclPhotonHcalIsolFilter.hcalisolendcapcut = 6.
