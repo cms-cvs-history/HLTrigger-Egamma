@@ -4,7 +4,6 @@ module hltEgammaHcalIsolFilter = HLTEgammaHcalIsolFilter {
       InputTag nonIsoTag  = hltSingleEgammaHcalNonIsol
       double hcalisolbarrelcut = 3.
       double hcalisolendcapcut = 3.
-      double HoverEcut = 0.05
       int32 ncandcut = 1
       bool doIsolated = true
 }
