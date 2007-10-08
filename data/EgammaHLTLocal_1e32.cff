@@ -56,7 +56,7 @@ include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
  replace l1seedRelaxedDouble.L1SeedsLogicalExpression = "L1_DoubleEG10"
 
  module  l1seedExclusiveDouble = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi" 
- replace l1seedExclusiveDouble.L1SeedsLogicalExpression = "L1_ExclusiveDoubleIsoEG4"
+ replace l1seedExclusiveDouble.L1SeedsLogicalExpression = "L1_ExclusiveDoubleIsoEG6"
  
  module  l1seedSinglePrescaled = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
  replace l1seedSinglePrescaled.L1SeedsLogicalExpression = "L1_SingleIsoEG10"
