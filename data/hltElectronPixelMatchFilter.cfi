@@ -2,12 +2,9 @@ module hltElectronPixelMatchFilter = HLTElectronPixelMatchFilter {
 
       InputTag candTag                = hltEgammaHcalIsolFilter
 
-      InputTag L1IsoPixelmapbarrelTag      = electronPixelSeeds:correctedHybridSuperClusters
-      InputTag L1IsoPixelmapendcapTag      = electronPixelSeeds:correctedEndcapSuperClustersWithPreshower
+      InputTag L1IsoPixelSeedsTag      = electronPixelSeeds
+      InputTag L1NonIsoPixelSeedsTag      = electronPixelSeeds
 
-      InputTag L1NonIsoPixelmapbarrelTag   = electronPixelSeeds:correctedL1NonIsoHybridSuperClusters
-      InputTag L1NonIsoPixelmapendcapTag   = electronPixelSeeds:correctedL1NonIsoEndcapSuperClustersWithPreshower
-      
       bool doIsolated = true	
       double   npixelmatchcut         = 1
       int32    ncandcut               = 1
