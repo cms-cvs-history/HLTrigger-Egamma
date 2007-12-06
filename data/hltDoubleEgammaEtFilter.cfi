@@ -1,6 +1,0 @@
-//ELECTRONS
-module hltDoubleEgammaEtFilter = HLTEgammaEtFilter {
-      InputTag inputTag = hltDoubleL1MatchFilter
-      double etcut = 12.0
-      int32  ncandcut = 2
-}
