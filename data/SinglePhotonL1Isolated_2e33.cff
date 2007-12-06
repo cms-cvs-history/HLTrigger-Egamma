@@ -18,9 +18,9 @@
 # L1 MATCH
 #--------------------------------------------------------------------#
 include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
-module hltL1IsoSinglePhotonL1MatchFilter = hltEgammaL1MatchFilter from "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi" 
+module hltL1IsoSinglePhotonL1MatchFilter = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi"
 
-     replace hltL1IsoSinglePhotonL1MatchFilter.candTag = l1IsoRecoEcalCandidate
+     replace hltL1IsoSinglePhotonL1MatchFilter.candIsolatedTag = l1IsoRecoEcalCandidate
  #     InputTag l1Tag = l1extraParticles:Isolated
  #     int32  ncandcut = 1
 #
