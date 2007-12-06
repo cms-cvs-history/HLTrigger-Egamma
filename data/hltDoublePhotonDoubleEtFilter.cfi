@@ -1,7 +1,0 @@
-//PHOTONS
-module hltDoublePhotonDoubleEtFilter = HLTEgammaDoubleEtFilter {
-      InputTag candTag =  hltDoublePhotonTrackIsolFilter
-      double etcut1 = 30.0
-      double etcut2 = 20.0
-      int32  npaircut = 1
-}
