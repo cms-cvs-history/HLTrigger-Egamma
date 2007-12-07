@@ -3,6 +3,8 @@ module hltEgammaL1MatchFilterRegional = HLTEgammaL1MatchFilterRegional {
       InputTag l1IsolatedTag = l1extraParticles:Isolated
       InputTag candNonIsolatedTag = hltRecoNonIsolatedEcalCandidate
       InputTag l1NonIsolatedTag = l1extraParticles:NonIsolated
+ 
+      InputTag L1SeedFilterTag = dummy
       bool doIsolated = true
 
       int32  ncandcut = 1
