@@ -75,34 +75,6 @@ block HLTEgamma_RECO = {
 }
 
 block HLTEgamma_AOD = {
- untracked vstring outputCommands = {
-	"keep *_l1IsoRecoEcalCandidate_*_*",
-	"keep *_l1NonIsoRecoEcalCandidate_*_*",
-	//electrons
-	"keep *_l1IsolatedElectronHcalIsol_*_*",
-	"keep *_l1NonIsolatedElectronHcalIsol_*_*",
-	"keep *_l1IsoElectronTrackIsol_*_*",
-	"keep *_l1NonIsoElectronTrackIsol_*_*",
-	//photons
-	"keep *_l1IsolatedPhotonEcalIsol_*_*",
-	"keep *_l1NonIsolatedPhotonEcalIsol_*_*",
-	"keep *_l1IsolatedPhotonHcalIsol_*_*",
-	"keep *_l1NonIsolatedPhotonHcalIsol_*_*",
-	"keep *_l1IsoPhotonTrackIsol_*_*",
-	"keep *_l1NonIsoPhotonTrackIsol_*_*",
-	//high em
-	"keep *_l1NonIsoEMHcalDoubleCone_*_*",
-	//electrons SC and track
-	"keep *_pixelMatchElectronsL1IsoForHLT_*_*",
-        "keep *_pixelMatchElectronsL1NonIsoForHLT_*_*",	
-	"keep *_correctedHybridSuperClustersL1Isolated_*_*",
-	"keep *_correctedHybridSuperClustersL1NonIsolated_*_*",
-	"keep *_correctedEndcapSuperClustersWithPreshowerL1Isolated_*_*",
-	"keep *_correctedEndcapSuperClustersWithPreshowerL1NonIsolated_*_*",
-	"keep recoTracks_ctfL1IsoWithMaterialTracksBarrel_*_*",
-	"keep recoTracks_ctfL1NonIsoWithMaterialTracksBarrel_*_*",
-	"keep recoTracks_ctfL1IsoWithMaterialTracksEndcap_*_*",
-	"keep recoTracks_ctfL1NonIsoWithMaterialTracksEndcap_*_*"
- }
+ untracked vstring outputCommands = { }
 }
 
