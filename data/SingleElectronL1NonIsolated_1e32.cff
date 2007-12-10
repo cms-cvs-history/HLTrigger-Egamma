@@ -31,7 +31,7 @@ module hltL1NonIsoSingleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRe
 
      replace hltL1NonIsoSingleElectronL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
      replace hltL1NonIsoSingleElectronL1MatchFilterRegional.candNonIsolatedTag = l1NonIsoRecoEcalCandidate
-
+     replace hltL1NonIsoSingleElectronL1MatchFilterRegional.L1SeedFilterTag = l1seedRelaxedSingle
  #     InputTag l1Tag = l1extraParticles:Isolated
      replace  hltL1NonIsoSingleElectronL1MatchFilterRegional.ncandcut = 1
      replace  hltL1NonIsoSingleElectronL1MatchFilterRegional.doIsolated = false

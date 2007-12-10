@@ -5,27 +5,18 @@
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
 
      replace hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
      replace hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional.candNonIsolatedTag = l1NonIsoRecoEcalCandidate
+     replace hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional.L1SeedFilterTag = l1seedRelaxedSingle
 
- #     InputTag l1Tag = l1extraParticles:Isolated
      replace  hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional.ncandcut = 1
      replace  hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional.doIsolated = false
-#
-#      double region_eta_size      = 0.522
-#      double region_eta_size_ecap = 0.87
-#      double region_phi_size      = 1.044
-#      double barrel_end           = 1.4791
-#      double endcap_end           = 2.5
-
 
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1NonIsoSinglePhotonEMVeryHighEtEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
 replace hltL1NonIsoSinglePhotonEMVeryHighEtEtFilter.inputTag = hltL1NonIsoSingleEMVeryHighEtL1MatchFilterRegional
@@ -46,7 +37,6 @@ replace hltL1NonIsoSinglePhotonEMVeryHighEtEtFilter.ncandcut = 1
 sequence singleEMVHEL1NonIsolated = { hltBegin
 				& l1seedRelaxedSingle
                          & doRegionalEgammaEcal
-#				& doLocalEcal
   				& l1IsolatedEcalClusters
                                 & l1NonIsolatedEcalClusters
                                 & l1IsoRecoEcalCandidate

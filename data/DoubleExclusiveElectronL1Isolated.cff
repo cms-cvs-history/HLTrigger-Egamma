@@ -19,7 +19,7 @@ module hltL1IsoDoubleExclElectronL1MatchFilterRegional = hltEgammaL1MatchFilterR
 
 
      replace hltL1IsoDoubleExclElectronL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
-
+     replace hltL1IsoDoubleExclElectronL1MatchFilterRegional.L1SeedFilterTag = l1seedExclusiveDouble
      replace  hltL1IsoDoubleExclElectronL1MatchFilterRegional.ncandcut = 2
      replace  hltL1IsoDoubleExclElectronL1MatchFilterRegional.doIsolated = true
 

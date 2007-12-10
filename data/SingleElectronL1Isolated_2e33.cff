@@ -21,7 +21,7 @@
 module hltL1IsoSingleL1MatchFilter = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi"
 
      replace hltL1IsoSingleL1MatchFilter.candIsolatedTag = l1IsoRecoEcalCandidate
-
+     replace hltL1IsoSingleL1MatchFilter.L1SeedFilterTag = l1seedSingle
 
 #--------------------------------------------------------------------#
 # ET CUT

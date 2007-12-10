@@ -10,7 +10,7 @@
 module hltL1IsoDoubleExclPhotonL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
 
       replace hltL1IsoDoubleExclPhotonL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
-	 
+      replace hltL1IsoDoubleExclPhotonL1MatchFilterRegional.L1SeedFilterTag = l1seedExclusiveDouble
       replace  hltL1IsoDoubleExclPhotonL1MatchFilterRegional.ncandcut = 2
       replace  hltL1IsoDoubleExclPhotonL1MatchFilterRegional.doIsolated = true
 

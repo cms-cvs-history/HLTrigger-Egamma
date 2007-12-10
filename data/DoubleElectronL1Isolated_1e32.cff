@@ -24,6 +24,7 @@ module hltL1IsoDoubleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRegio
 
 #     replace hltL1IsoDoubleElectronL1MatchFilter.candTag = l1IsoRecoEcalCandidate
      replace hltL1IsoDoubleElectronL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
+     replace hltL1IsoDoubleElectronL1MatchFilterRegional.L1SeedFilterTag = l1seedDouble
 
 #     InputTag l1Tag = l1extraParticles:Isolated
      #replace  hltL1IsoDoubleElectronL1MatchFilter.ncandcut = 2

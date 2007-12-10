@@ -18,23 +18,13 @@
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1IsoDoubleElectronZeeL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
-#module hltL1IsoDoubleElectronZeeL1MatchFilter = hltEgammaL1MatchFilter from "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi" 
 
-#     replace hltL1IsoDoubleElectronZeeL1MatchFilter.candTag = l1IsoRecoEcalCandidate
      replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
-
-#     InputTag l1Tag = l1extraParticles:Isolated
-     #replace hltL1IsoDoubleElectronZeeL1MatchFilter.ncandcut = 2
+     replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.L1SeedFilterTag = l1seedDouble
      replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.ncandcut = 2
      replace hltL1IsoDoubleElectronZeeL1MatchFilterRegional.doIsolated = true
-#
-#      double region_eta_size      = 0.522
-#      double region_eta_size_ecap = 0.87
-#      double region_phi_size      = 1.044
-#      double barrel_end           = 1.4791
-#      double endcap_end           = 2.5
+
 
 #--------------------------------------------------------------------#
 # ET CUT
