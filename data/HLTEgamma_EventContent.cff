@@ -76,5 +76,31 @@ block HLTEgamma_RECO = {
 
 block HLTEgamma_AOD = {
  untracked vstring outputCommands = { }
+
+VInputTag triggerCollections = {
+ l1IsoRecoEcalCandidate,
+ l1NonIsoRecoEcalCandidate,
+ pixelMatchElectronsL1IsoForHLT,
+ pixelMatchElectronsL1NonIsoForHLT
+}
+
+
+VInputTag triggerFilters = {
+hltL1IsoSinglePhotonTrackIsolFilter,
+hltL1NonIsoSinglePhotonTrackIsolFilter,
+hltL1IsoDoublePhotonDoubleEtFilter,
+hltL1NonIsoDoublePhotonDoubleEtFilter,
+hltL1NonIsoSingleEMHighEtTrackIsolFilter,
+hltL1NonIsoSinglePhotonEMVeryHighEtEtFilter,
+hltL1IsoDoubleExclPhotonTrackIsolFilter,
+hltL1IsoSinglePhotonPrescaledTrackIsolFilter,
+hltL1IsoSingleElectronTrackIsolFilter,
+hltL1NonIsoSingleElectronTrackIsolFilter,
+hltL1IsoDoubleElectronTrackIsolFilter,
+hltL1NonIsoDoubleElectronTrackIsolFilter,
+hltL1IsoDoubleExclElectronTrackIsolFilter,
+hltL1IsoDoubleElectronZeePMMassFilter
+}
+
 }
 
