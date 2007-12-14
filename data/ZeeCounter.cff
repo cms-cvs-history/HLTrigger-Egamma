@@ -10,8 +10,6 @@
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
 
 
-### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronHcalIsol.cfi"
-### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronTrackIsol.cfi"
 
 #----------- filter modules for the sequence --------------------------------#
 
@@ -29,7 +27,6 @@ module hltL1IsoDoubleElectronZeeL1MatchFilterRegional = hltEgammaL1MatchFilterRe
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1IsoDoubleElectronZeeEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
  #replace hltL1IsoDoubleElectronZeeEtFilter.inputTag = hltL1IsoDoubleElectronZeeL1MatchFilter
@@ -42,7 +39,6 @@ module hltL1IsoDoubleElectronZeeEtFilter = hltEgammaEtFilter from "HLTrigger/Ega
 #--------------------------------------------------------------------#
 # HCAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1IsoDoubleElectronZeeHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
  replace hltL1IsoDoubleElectronZeeHcalIsolFilter.candTag = hltL1IsoDoubleElectronZeeEtFilter
@@ -54,7 +50,6 @@ module hltL1IsoDoubleElectronZeeHcalIsolFilter = hltEgammaHcalIsolFilter from "H
 #--------------------------------------------------------------------#
 # PIXEL MATCH
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 module hltL1IsoDoubleElectronZeePixelMatchFilter = hltElectronPixelMatchFilter from "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 
   replace hltL1IsoDoubleElectronZeePixelMatchFilter.candTag = hltL1IsoDoubleElectronZeeHcalIsolFilter
@@ -67,7 +62,6 @@ module hltL1IsoDoubleElectronZeePixelMatchFilter = hltElectronPixelMatchFilter f
 # E OVER P !! HERE is not applyed and it is used to change 
 #       the HLTFilterObjectWithRefs from RecoEcalCandidates to Electron
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
  module hltL1IsoDoubleElectronZeeEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
 
  replace hltL1IsoDoubleElectronZeeEoverpFilter.candTag = hltL1IsoDoubleElectronZeePixelMatchFilter
@@ -79,7 +73,6 @@ module hltL1IsoDoubleElectronZeePixelMatchFilter = hltElectronPixelMatchFilter f
 #--------------------------------------------------------------------#
 # TRACK ISOL
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
  module hltL1IsoDoubleElectronZeeTrackIsolFilter = hltElectronTrackIsolFilter from "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
 
 replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.candTag  = hltL1IsoDoubleElectronZeeEoverpFilter
@@ -90,7 +83,6 @@ replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.ncandcut         = 2
 #--------------------------------------------------------------------#
 # INV MASS
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltZeePMMassFilter.cfi"
  module hltL1IsoDoubleElectronZeePMMassFilter = hltZeePMMassFilter from "HLTrigger/Egamma/data/hltZeePMMassFilter.cfi"
  replace  hltL1IsoDoubleElectronZeePMMassFilter.candTag  = hltL1IsoDoubleElectronZeeTrackIsolFilter
  replace  hltL1IsoDoubleElectronZeePMMassFilter.lowerMassCut = 54.22

@@ -20,7 +20,6 @@
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1NonIsoSingleEMHighEtL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
 
      replace hltL1NonIsoSingleEMHighEtL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
@@ -32,7 +31,6 @@ module hltL1NonIsoSingleEMHighEtL1MatchFilterRegional = hltEgammaL1MatchFilterRe
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1NonIsoSinglePhotonEMHighEtEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
 replace hltL1NonIsoSinglePhotonEMHighEtEtFilter.inputTag = hltL1NonIsoSingleEMHighEtL1MatchFilterRegional
@@ -42,7 +40,6 @@ replace hltL1NonIsoSinglePhotonEMHighEtEtFilter.ncandcut = 1
 #--------------------------------------------------------------------#
 # ECAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltPhotonEcalIsolFilter.cfi"
 module hltL1NonIsoSingleEMHighEtEcalIsolFilter = hltPhotonEcalIsolFilter from "HLTrigger/Egamma/data/hltPhotonEcalIsolFilter.cfi" 
 
 replace hltL1NonIsoSingleEMHighEtEcalIsolFilter.candTag = hltL1NonIsoSinglePhotonEMHighEtEtFilter
@@ -55,7 +52,6 @@ replace hltL1NonIsoSingleEMHighEtEcalIsolFilter.doIsolated = false
 #--------------------------------------------------------------------#
 # H/E
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltSingleEMHOEFilter.cfi"
 module hltL1NonIsoSingleEMHighEtHOEFilter = hltSinlgeEMHOEFilter from "HLTrigger/Egamma/data/hltSingleEMHOEFilter.cfi"
 
       replace hltL1NonIsoSingleEMHighEtHOEFilter.candTag = hltL1NonIsoSingleEMHighEtEcalIsolFilter
@@ -70,7 +66,6 @@ module hltL1NonIsoSingleEMHighEtHOEFilter = hltSinlgeEMHOEFilter from "HLTrigger
 #--------------------------------------------------------------------#
 # HCAL DOUBLE CONE
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltSingleEMHcalDoubleConeFilter.cfi"
 module hltL1NonIsoSingleEMHighEtHcalDBCFilter = hltSingleEMHcalDoubleConeFilter from "HLTrigger/Egamma/data/hltSingleEMHcalDoubleConeFilter.cfi"
 
  #     InputTag candTag = hltL1NonIsoSingleEMHighEtHOEFilter
@@ -84,7 +79,6 @@ module hltL1NonIsoSingleEMHighEtHcalDBCFilter = hltSingleEMHcalDoubleConeFilter 
 #--------------------------------------------------------------------#
 # TRACK ISOL
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltPhotonTrackIsolFilter.cfi"
  module hltL1NonIsoSingleEMHighEtTrackIsolFilter = hltPhotonTrackIsolFilter from "HLTrigger/Egamma/data/hltPhotonTrackIsolFilter.cfi"
 
 replace  hltL1NonIsoSingleEMHighEtTrackIsolFilter.candTag  = hltL1NonIsoSingleEMHighEtHcalDBCFilter

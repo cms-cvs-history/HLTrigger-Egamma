@@ -10,19 +10,13 @@
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
 
 
-### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronHcalIsol.cfi"
-### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronTrackIsol.cfi"
-
 #----------- filter modules for the sequence --------------------------------#
 
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1IsoDoubleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
-#module hltL1IsoDoubleElectronL1MatchFilter = hltEgammaL1MatchFilter from "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi" 
 
-#     replace hltL1IsoDoubleElectronL1MatchFilter.candTag = l1IsoRecoEcalCandidate
      replace hltL1IsoDoubleElectronL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
      replace hltL1IsoDoubleElectronL1MatchFilterRegional.L1SeedFilterTag = l1seedDouble
 
@@ -40,7 +34,6 @@ module hltL1IsoDoubleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRegio
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1IsoDoubleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
  #replace hltL1IsoDoubleElectronEtFilter.inputTag = hltL1IsoDoubleElectronL1MatchFilter
@@ -53,7 +46,6 @@ module hltL1IsoDoubleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma
 #--------------------------------------------------------------------#
 # HCAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1IsoDoubleElectronHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
  replace hltL1IsoDoubleElectronHcalIsolFilter.candTag = hltL1IsoDoubleElectronEtFilter
@@ -65,12 +57,10 @@ module hltL1IsoDoubleElectronHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTr
 #--------------------------------------------------------------------#
 # PIXEL MATCH
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 module hltL1IsoDoubleElectronPixelMatchFilter = hltElectronPixelMatchFilter from "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 
   replace hltL1IsoDoubleElectronPixelMatchFilter.candTag = hltL1IsoDoubleElectronHcalIsolFilter
   replace hltL1IsoDoubleElectronPixelMatchFilter.L1IsoPixelSeedsTag = l1IsoElectronPixelSeeds
-#  replace hltL1IsoDoubleElectronPixelMatchFilter.L1IsoPixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
 #      double   npixelmatchcut         = 1
   replace hltL1IsoDoubleElectronPixelMatchFilter.ncandcut = 2
 
@@ -78,7 +68,6 @@ module hltL1IsoDoubleElectronPixelMatchFilter = hltElectronPixelMatchFilter from
 # E OVER P !! HERE is not applyed and it is used to change 
 #       the HLTFilterObjectWithRefs from RecoEcalCandidates to Electron
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
  module hltL1IsoDoubleElectronEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
 
  replace hltL1IsoDoubleElectronEoverpFilter.candTag = hltL1IsoDoubleElectronPixelMatchFilter
@@ -90,7 +79,6 @@ module hltL1IsoDoubleElectronPixelMatchFilter = hltElectronPixelMatchFilter from
 #--------------------------------------------------------------------#
 # TRACK ISOL
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
  module hltL1IsoDoubleElectronTrackIsolFilter = hltElectronTrackIsolFilter from "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
 
 replace  hltL1IsoDoubleElectronTrackIsolFilter.candTag  = hltL1IsoDoubleElectronEoverpFilter

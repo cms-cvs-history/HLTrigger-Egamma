@@ -16,17 +16,12 @@
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
  include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoElectronTrackIsol.cff"
 
-
-### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronHcalIsol.cfi"
-### include "RecoEgamma/EgammaHLTProducers/data/hltSingleElectronTrackIsol.cfi"
-
 #----------- filter modules for the sequence --------------------------------#
 
 
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1NonIsoSingleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
 
      replace hltL1NonIsoSingleElectronL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
@@ -45,7 +40,6 @@ module hltL1NonIsoSingleElectronL1MatchFilterRegional = hltEgammaL1MatchFilterRe
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1NonIsoSingleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
  replace hltL1NonIsoSingleElectronEtFilter.inputTag = hltL1NonIsoSingleElectronL1MatchFilterRegional
@@ -56,7 +50,6 @@ module hltL1NonIsoSingleElectronEtFilter = hltEgammaEtFilter from "HLTrigger/Ega
 #--------------------------------------------------------------------#
 # HCAL ISOL
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1NonIsoSingleElectronHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
  replace hltL1NonIsoSingleElectronHcalIsolFilter.candTag = hltL1NonIsoSingleElectronEtFilter
@@ -70,14 +63,11 @@ module hltL1NonIsoSingleElectronHcalIsolFilter = hltEgammaHcalIsolFilter from "H
 #--------------------------------------------------------------------#
 # PIXEL MATCH
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 module hltL1NonIsoSingleElectronPixelMatchFilter = hltElectronPixelMatchFilter from "HLTrigger/Egamma/data/hltElectronPixelMatchFilter.cfi"
 
   replace hltL1NonIsoSingleElectronPixelMatchFilter.candTag = hltL1NonIsoSingleElectronHcalIsolFilter
   replace hltL1NonIsoSingleElectronPixelMatchFilter.L1IsoPixelSeedsTag = l1IsoElectronPixelSeeds
-#  replace hltL1NonIsoSingleElectronPixelMatchFilter.L1IsoPixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
   replace hltL1NonIsoSingleElectronPixelMatchFilter.L1NonIsoPixelSeedsTag = l1NonIsoElectronPixelSeeds
-#  replace hltL1NonIsoSingleElectronPixelMatchFilter.L1NonIsoPixelmapendcapTag = l1NonIsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1NonIsolated
 
 replace hltL1NonIsoSingleElectronPixelMatchFilter.doIsolated = false
 #      double   npixelmatchcut         = 1
@@ -113,7 +103,6 @@ replace hltL1NonIsoSingleElectronPixelMatchFilter.doIsolated = false
 #--------------------------------------------------------------------#
 # TRACK ISOL
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
  module hltL1NonIsoSingleElectronTrackIsolFilter = hltElectronTrackIsolFilter from "HLTrigger/Egamma/data/hltElectronTrackIsolFilter.cfi"
 
 #replace  hltL1NonIsoSingleElectronTrackIsolFilter.candTag  = hltL1NonIsoSingleElectronEoverpFilter
@@ -133,9 +122,6 @@ replace  hltL1NonIsoSingleElectronTrackIsolFilter.doIsolated = false
          uint32 eventOffset    = 0
   }
 
-
-### include "RecoLocalTracker/Configuration/data/RecoLocalTracker.cff"
-### include "RecoLocalCalo/Configuration/data/RecoLocalCalo.cff"
 
   sequence singleElectronL1NonIsolated = {
 	                           hltBegin& 

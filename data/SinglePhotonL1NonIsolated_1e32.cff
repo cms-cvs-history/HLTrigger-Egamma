@@ -14,19 +14,10 @@
  include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoPhotonTrackIsol.cff"
 
 
-## include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonEcalIsol.cfi"
-## include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonHcalIsol.cfi"
-## include "RecoEgamma/EgammaHLTProducers/data/hltSinglePhotonTrackIsol.cfi"
-
-## include "HLTrigger/Egamma/data/hltSinglePhotonEtFilter.cfi"
- include "HLTrigger/Egamma/data/hltSinglePhotonEcalIsolFilter.cfi"
-## include "HLTrigger/Egamma/data/hltSinglePhotonHcalIsolFilter.cfi"
-## include "HLTrigger/Egamma/data/hltSinglePhotonTrackIsolFilter.cfi"
 
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaL1MatchFilter.cfi"
 module hltL1NonIsoSinglePhotonL1MatchFilterRegional = hltEgammaL1MatchFilterRegional from "HLTrigger/Egamma/data/hltEgammaL1MatchFilterRegional.cfi" 
 
      replace hltL1NonIsoSinglePhotonL1MatchFilterRegional.candIsolatedTag = l1IsoRecoEcalCandidate
@@ -40,10 +31,8 @@ replace hltL1NonIsoSinglePhotonL1MatchFilterRegional.L1SeedFilterTag=l1seedRelax
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1NonIsoSinglePhotonEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
-#replace hltL1NonIsoSinglePhotonEtFilter.inputTag = hltL1NonIsoSinglePhotonL1MatchFilter
 replace hltL1NonIsoSinglePhotonEtFilter.inputTag = hltL1NonIsoSinglePhotonL1MatchFilterRegional
 replace hltL1NonIsoSinglePhotonEtFilter.etcut = 40.0
 replace hltL1NonIsoSinglePhotonEtFilter.ncandcut = 1
@@ -51,7 +40,6 @@ replace hltL1NonIsoSinglePhotonEtFilter.ncandcut = 1
 #--------------------------------------------------------------------#
 # ECAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltPhotonEcalIsolFilter.cfi"
 module hltL1NonIsoSinglePhotonEcalIsolFilter = hltPhotonEcalIsolFilter from "HLTrigger/Egamma/data/hltPhotonEcalIsolFilter.cfi" 
 
 replace hltL1NonIsoSinglePhotonEcalIsolFilter.candTag = hltL1NonIsoSinglePhotonEtFilter
@@ -64,7 +52,6 @@ replace hltL1NonIsoSinglePhotonEcalIsolFilter.doIsolated = false
 #--------------------------------------------------------------------#
 # HCAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1NonIsoSinglePhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
  replace hltL1NonIsoSinglePhotonHcalIsolFilter.candTag = hltL1NonIsoSinglePhotonEcalIsolFilter
@@ -78,7 +65,6 @@ module hltL1NonIsoSinglePhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLT
 #--------------------------------------------------------------------#
 # TRACK ISOL
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltPhotonTrackIsolFilter.cfi"
  module hltL1NonIsoSinglePhotonTrackIsolFilter = hltPhotonTrackIsolFilter from "HLTrigger/Egamma/data/hltPhotonTrackIsolFilter.cfi"
 
 replace  hltL1NonIsoSinglePhotonTrackIsolFilter.candTag  = hltL1NonIsoSinglePhotonHcalIsolFilter
