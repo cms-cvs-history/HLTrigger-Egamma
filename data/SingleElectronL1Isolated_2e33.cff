@@ -55,6 +55,7 @@ module hltL1IsoSingleElectronPixelMatchFilter = hltElectronPixelMatchFilter from
   replace hltL1IsoSingleElectronPixelMatchFilter.candTag = hltL1IsoSingleElectronHcalIsolFilter
   replace hltL1IsoSingleElectronPixelMatchFilter.L1IsoPixelmapbarrelTag = l1IsoElectronPixelSeeds:correctedHybridSuperClustersL1Isolated
   replace hltL1IsoSingleElectronPixelMatchFilter.L1IsoPixelmapendcapTag = l1IsoElectronPixelSeeds:correctedEndcapSuperClustersWithPreshowerL1Isolated
+
 #      double   npixelmatchcut         = 1
 #      int32    ncandcut               = 1
 
