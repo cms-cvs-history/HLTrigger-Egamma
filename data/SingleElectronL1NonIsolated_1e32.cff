@@ -1,21 +1,3 @@
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoRecoEcalCandidate.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedElectronHcalIsol.cff"
- 
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoSequenceForHLT.cff"
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1NonIsoSequenceForHLT.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoTrackingSequenceForHLT.cff"
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1NonIsoTrackingSequenceForHLT.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronsRegionalRecoTracker.cff"	
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoElectronsRegionalRecoTracker.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoElectronTrackIsol.cff"
-
 #----------- filter modules for the sequence --------------------------------#
 
 
@@ -76,7 +58,6 @@ replace hltL1NonIsoSingleElectronPixelMatchFilter.doIsolated = false
 ## #--------------------------------------------------------------------#
 ## # E OVER P       
 ## #--------------------------------------------------------------------#
-##  include "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
 ##  module hltL1NonIsoSingleElectronEoverpFilter = hltElectronEoverpFilter from "HLTrigger/Egamma/data/hltElectronEoverpFilter.cfi"
 ## 
 ##  replace hltL1NonIsoSingleElectronEoverpFilter.candTag = hltL1NonIsoSingleElectronPixelMatchFilter

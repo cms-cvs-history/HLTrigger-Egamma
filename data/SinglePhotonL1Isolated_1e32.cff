@@ -1,9 +1,3 @@
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonEcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedPhotonHcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"	
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonTrackIsol.cff"
-
 
 #--------------------------------------------------------------------#
 # L1 MATCH

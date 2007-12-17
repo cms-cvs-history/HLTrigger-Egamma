@@ -1,21 +1,3 @@
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoRecoEcalCandidate.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedElectronHcalIsol.cff"
- 
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoLargeWindowSequenceForHLT.cff"
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1NonIsoLargeWindowSequenceForHLT.cff"
-
-  include "RecoEgamma/EgammaHLTProducers/data/l1IsoLargeWindowElectronsRegionalRecoTracker.cff"
-  include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoLargeWindowElectronsRegionalRecoTracker.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoLargeWindowElectronTrackIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoLargeWindowElectronTrackIsol.cff"
-
-#----------- filter modules for the sequence --------------------------------#
-
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#

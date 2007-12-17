@@ -1,21 +1,3 @@
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoRecoEcalCandidate.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonEcalIsol.cff"	
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoPhotonEcalIsol.cff"	
-
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedElectronHcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/hltHcalDoubleCone.cfi" 
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoEMHcalDoubleCone.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoEgammaRegionalRecoTracker.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonTrackIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoPhotonTrackIsol.cff"
-
-
 
 #--------------------------------------------------------------------#
 # L1 MATCH

@@ -1,21 +1,5 @@
  
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedEcalSuperClusters.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedEcalSuperClusters.cff"
-
-include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"	
-
-
-
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoSequenceForHLT.cff"
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoTrackingSequenceForHLT.cff"
-
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"
-
+ include "HLTrigger/Egamma/data/CommonEgammaHLTReco.cff"
 
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"

@@ -1,29 +1,4 @@
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoRecoEcalCandidate.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonEcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoPhotonEcalIsol.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedPhotonHcalIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedPhotonHcalIsol.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"	
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoEgammaRegionalRecoTracker.cff"	
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonTrackIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoPhotonTrackIsol.cff"
-
-
-
-## include "RecoEgamma/EgammaHLTProducers/data/hltDoublePhotonEcalIsol.cfi"
-## include "RecoEgamma/EgammaHLTProducers/data/hltDoublePhotonHcalIsol.cfi"
-## include "RecoEgamma/EgammaHLTProducers/data/hltDoublePhotonTrackIsol.cfi"
-
-## include "HLTrigger/Egamma/data/hltDoublePhotonEtFilter.cfi"
-## include "HLTrigger/Egamma/data/hltSinglePhotonEcalIsolFilter.cfi"
-## include "HLTrigger/Egamma/data/hltDoublePhotonHcalIsolFilter.cfi"
-## include "HLTrigger/Egamma/data/hltDoublePhotonTrackIsolFilter.cfi"
-
+ 
 #--------------------------------------------------------------------#
 # L1 MATCH
 #--------------------------------------------------------------------#
@@ -39,7 +14,6 @@ module hltL1NonIsoDoublePhotonL1MatchFilterRegional = hltEgammaL1MatchFilterRegi
 #--------------------------------------------------------------------#
 # ET CUT
 #--------------------------------------------------------------------#
-#include "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 module hltL1NonIsoDoublePhotonEtFilter = hltEgammaEtFilter from "HLTrigger/Egamma/data/hltEgammaEtFilter.cfi"
 
 #replace hltL1NonIsoDoublePhotonEtFilter.inputTag = hltL1NonIsoDoublePhotonL1MatchFilter
@@ -58,7 +32,6 @@ replace hltL1NonIsoDoublePhotonEtFilter.ncandcut = 2
 #--------------------------------------------------------------------#
 # ECAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltPhotonEcalIsolFilter.cfi"
 module hltL1NonIsoDoublePhotonEcalIsolFilter = hltPhotonEcalIsolFilter from "HLTrigger/Egamma/data/hltPhotonEcalIsolFilter.cfi" 
 
 replace hltL1NonIsoDoublePhotonEcalIsolFilter.candTag = hltL1NonIsoDoublePhotonEtFilter
@@ -71,7 +44,6 @@ replace hltL1NonIsoDoublePhotonEcalIsolFilter.doIsolated = false
 #--------------------------------------------------------------------#
 # HCAL ISOL
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 module hltL1NonIsoDoublePhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLTrigger/Egamma/data/hltEgammaHcalIsolFilter.cfi"
 
  replace hltL1NonIsoDoublePhotonHcalIsolFilter.candTag = hltL1NonIsoDoublePhotonEcalIsolFilter 
@@ -86,7 +58,6 @@ module hltL1NonIsoDoublePhotonHcalIsolFilter = hltEgammaHcalIsolFilter from "HLT
 #--------------------------------------------------------------------#
 # TRACK ISOL
 #--------------------------------------------------------------------#
- include "HLTrigger/Egamma/data/hltPhotonTrackIsolFilter.cfi"
  module hltL1NonIsoDoublePhotonTrackIsolFilter = hltPhotonTrackIsolFilter from "HLTrigger/Egamma/data/hltPhotonTrackIsolFilter.cfi"
 
 replace  hltL1NonIsoDoublePhotonTrackIsolFilter.candTag  = hltL1NonIsoDoublePhotonHcalIsolFilter
@@ -99,7 +70,6 @@ replace  hltL1NonIsoDoublePhotonTrackIsolFilter.doIsolated = false
 #--------------------------------------------------------------------#
 # DOUBLE ET CUT
 #--------------------------------------------------------------------#
-include "HLTrigger/Egamma/data/hltEgammaDoubleEtFilter.cfi"
 module hltL1NonIsoDoublePhotonDoubleEtFilter = hltEgammaDoubleEtFilter from "HLTrigger/Egamma/data/hltEgammaDoubleEtFilter.cfi"
 
 replace hltL1NonIsoDoublePhotonDoubleEtFilter.candTag =  hltL1NonIsoDoublePhotonTrackIsolFilter

@@ -1,48 +1,7 @@
- 
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedElectronHcalIsol.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoElectronTrackIsol.cff"
-
-# include "RecoEcal/Configuration/data/RecoEcal.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1IsolatedEcalSuperClusters.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsolatedEcalSuperClusters.cff"
-## include "RecoEgamma/EgammaHLTProducers/data/RecoEcalL1Isolated.cff"
- 
-#include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalSingleCandidate.cfi"
-##include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalSingleCandidate.cfi"
-##replace hltRecoEcalSingleCandidate.scHybridBarrelProducer = correctedHybridSuperClustersL1Isolated
-##replace hltRecoEcalSingleCandidate.scIslandEndcapProducer = correctedEndcapSuperClustersWithPreshowerL1Isolated
-
-include "RecoEgamma/EgammaHLTProducers/data/l1IsoRecoEcalCandidate.cff"	
-
-
- #include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalDoubleCandidate.cfi"
- #include "RecoEgamma/EgammaHLTProducers/data/hltRecoEcalRelaxedDoubleCandidate.cfi"
-
-## include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronSequenceForHLT.cff"
-## include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronTrackingSequenceForHLT.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoSequenceForHLT.cff"
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoTrackingSequenceForHLT.cff"
-
- ## tracker: defines ckftracks and rstracks
- #include "RecoTracker/Configuration/data/RecoTracker.cff"
- ##include "RecoEgamma/EgammaHLTProducers/data/hltSingleRegionalRecoTracker.cff"
-
- # include "RecoEgamma/EgammaHLTProducers/data/hltDoubleRegionalRecoTracker.cff"
- # include "RecoEgamma/EgammaHLTProducers/data/hltRelaxedDoubleRegionalRecoTracker.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoEgammaRegionalRecoTracker.cff"
-
-# include "HLTrigger/Configuration/data/common/Level1Trigger.cff"
+ include "HLTrigger/Egamma/data/CommonEgammaHLTReco.cff"
 
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
-
- include "HLTrigger/Egamma/data/hltSingleL1MatchFilter.cfi"
- include "HLTrigger/Egamma/data/hltDoubleL1MatchFilter.cfi"
- include "HLTrigger/Egamma/data/hltRelaxedDoubleL1MatchFilter.cfi"
-
 
  module  l1seedSingle = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
  replace l1seedSingle.L1SeedsLogicalExpression = "L1_SingleIsoEG20"
