@@ -39,13 +39,3 @@
  include "RecoEgamma/EgammaHLTProducers/data/l1IsoPhotonTrackIsol.cff"
  include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoPhotonTrackIsol.cff"
 
-
-
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1IsoLargeWindowSequenceForHLT.cff"
- include "RecoEgamma/EgammaHLTProducers/data/pixelMatchElectronL1NonIsoLargeWindowSequenceForHLT.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoLargeWindowElectronsRegionalRecoTracker.cff"	
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoLargeWindowElectronsRegionalRecoTracker.cff"
-
- include "RecoEgamma/EgammaHLTProducers/data/l1IsoLargeWindowElectronTrackIsol.cff"
- include "RecoEgamma/EgammaHLTProducers/data/l1NonIsoLargeWindowElectronTrackIsol.cff"
