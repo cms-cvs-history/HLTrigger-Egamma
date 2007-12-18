@@ -1,3 +1,5 @@
+include "HLTrigger/Egamma/data/CommonEgammaHLTReco.cff"
+
 # common include file for different luminosities
 #
  include "HLTrigger/Egamma/data/EgammaHLTLocal_1e32.cff"

@@ -1,5 +1,4 @@
  
- include "HLTrigger/Egamma/data/CommonEgammaHLTReco.cff"
 
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeometry.cfi"
  include "L1TriggerConfig/L1GeometryProducers/data/l1CaloGeomRecordSource.cff"
