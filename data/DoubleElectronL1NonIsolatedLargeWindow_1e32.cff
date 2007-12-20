@@ -91,7 +91,7 @@ replace  hltL1NonIsoLargeWindowDoubleElectronTrackIsolFilter.doIsolated = false
 
 
 
-  sequence doubleElectronL1NonIsoLargeWindowlated = { 
+  sequence doubleElectronL1NonIsolatedLargeWindow = { 
  					hltBegin&
                                        # doL1T &
                                         # was like thisl1seedDouble &
