@@ -18,6 +18,7 @@ block HLTEgamma_FEVT = {
 	"keep *_l1IsoPhotonTrackIsol_*_*",
 	"keep *_l1NonIsoPhotonTrackIsol_*_*",
 	//high em
+	"keep *_hltHcalDoubleCone_*_*",
 	"keep *_l1NonIsoEMHcalDoubleCone_*_*",
 	//pixels seeds
  	"keep *_l1IsoElectronPixelSeeds_*_*",
@@ -91,6 +92,7 @@ block HLTEgamma_RECO = {
 	"keep *_l1IsoPhotonTrackIsol_*_*",
 	"keep *_l1NonIsoPhotonTrackIsol_*_*",
 	//high em
+	"keep *_hltHcalDoubleCone_*_*",
 	"keep *_l1NonIsoEMHcalDoubleCone_*_*",
 	//pixels seeds
  	"keep *_l1IsoElectronPixelSeeds_*_*",
