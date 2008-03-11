@@ -101,9 +101,10 @@ replace  hltL1IsoSingleElectronTrackIsolFilter.isoTag   = l1IsoElectronTrackIsol
                               l1IsolatedElectronHcalIsol & 
                              hltL1IsoSingleElectronHcalIsolFilter &
                               doLocalPixel & // pixel rechit for SC-pixel matching
-	                      pixelMatchElectronL1IsoSequenceForHLT & 
-                             hltL1IsoSingleElectronPixelMatchFilter &
 			      doLocalStrip & // strip rechit for the electron tracking
+	                      pixelMatchElectronL1IsoSequenceForHLT & 
+                             hltL1IsoSingleElectronPixelMatchFilter & 
+
                               pixelMatchElectronL1IsoTrackingSequenceForHLT &
                              ////hltL1IsoSingleElectronEoverpFilter &	
 	                     hltL1IsoSingleElectronHOneOEMinusOneOPFilter &

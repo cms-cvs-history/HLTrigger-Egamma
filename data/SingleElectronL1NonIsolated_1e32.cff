@@ -119,10 +119,10 @@ replace  hltL1NonIsoSingleElectronTrackIsolFilter.doIsolated = false
                                     l1NonIsolatedElectronHcalIsol & 
                                    hltL1NonIsoSingleElectronHcalIsolFilter &
                                     doLocalPixel & // pixel rechit for SC-pixel matching
+			            doLocalStrip & // strip rechit for the electron tracking
 	                            pixelMatchElectronL1IsoSequenceForHLT & 
 	                            pixelMatchElectronL1NonIsoSequenceForHLT & 
                                    hltL1NonIsoSingleElectronPixelMatchFilter &
-			            doLocalStrip & // strip rechit for the electron tracking
                                     pixelMatchElectronL1IsoTrackingSequenceForHLT &
                                     pixelMatchElectronL1NonIsoTrackingSequenceForHLT &
                                    ////hltL1NonIsoSingleElectronEoverpFilter &

@@ -96,9 +96,9 @@ replace  hltL1IsoLargeWindowDoubleElectronTrackIsolFilter.ncandcut         = 2
                              l1IsolatedElectronHcalIsol & hltL1IsoLargeWindowDoubleElectronHcalIsolFilter &
                              ##### trackerlocalreco &              
   			     doLocalPixel &
+                             doLocalStrip  & 
 	                     pixelMatchElectronL1IsoLargeWindowSequenceForHLT & 
                              hltL1IsoLargeWindowDoubleElectronPixelMatchFilter &
-                             doLocalStrip  & 
                              pixelMatchElectronL1IsoLargeWindowTrackingSequenceForHLT &
                              hltL1IsoLargeWindowDoubleElectronEoverpFilter &	
                              //ckftracks & 

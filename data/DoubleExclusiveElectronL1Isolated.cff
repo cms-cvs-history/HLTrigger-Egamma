@@ -84,9 +84,9 @@ replace  hltL1IsoDoubleExclElectronTrackIsolFilter.ncandcut         = 2
                              l1IsolatedElectronHcalIsol & 
 			     hltL1IsoDoubleExclElectronHcalIsolFilter &
 			     doLocalPixel &
+			     doLocalStrip  & 
 	                     pixelMatchElectronL1IsoSequenceForHLT & 
                              hltL1IsoDoubleExclElectronPixelMatchFilter &
-			     doLocalStrip  & 
                              pixelMatchElectronL1IsoTrackingSequenceForHLT &
                              hltL1IsoDoubleExclElectronEoverpFilter &	
                              l1IsoElectronsRegionalRecoTracker & //// here the regional is obtained by

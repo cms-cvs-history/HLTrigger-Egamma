@@ -116,6 +116,7 @@ replace  hltL1NonIsoLargeWindowSingleElectronTrackIsolFilter.doIsolated = false
                                     l1NonIsolatedElectronHcalIsol & 
                                    hltL1NonIsoLargeWindowSingleElectronHcalIsolFilter &
                                     doLocalPixel & // pixel rechit for SC-pixel matching
+			            doLocalStrip & // strip rechit for the electron tracking
 	                            pixelMatchElectronL1IsoLargeWindowSequenceForHLT & 
 	                            pixelMatchElectronL1NonIsoLargeWindowSequenceForHLT & 
                                    hltL1NonIsoLargeWindowSingleElectronPixelMatchFilter &

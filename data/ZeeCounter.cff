@@ -100,9 +100,9 @@ replace  hltL1IsoDoubleElectronZeeTrackIsolFilter.ncandcut         = 2
                              l1IsolatedElectronHcalIsol & hltL1IsoDoubleElectronZeeHcalIsolFilter &
                              ##### trackerlocalreco &              
   			     doLocalPixel &
+                             doLocalStrip  & 
 	                     pixelMatchElectronL1IsoSequenceForHLT & 
                              hltL1IsoDoubleElectronZeePixelMatchFilter &
-                             doLocalStrip  & 
                              pixelMatchElectronL1IsoTrackingSequenceForHLT &
                              hltL1IsoDoubleElectronZeeEoverpFilter &	
                              //ckftracks & 

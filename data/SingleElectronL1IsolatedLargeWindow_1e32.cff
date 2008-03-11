@@ -99,9 +99,9 @@ replace  hltL1IsoLargeWindowSingleElectronTrackIsolFilter.isoTag   = l1IsoLargeW
                               l1IsolatedElectronHcalIsol & 
                              hltL1IsoLargeWindowSingleElectronHcalIsolFilter &
                               doLocalPixel & // pixel rechit for SC-pixel matching
+			      doLocalStrip & // strip rechit for the electron tracking
 	                      pixelMatchElectronL1IsoLargeWindowSequenceForHLT & 
                              hltL1IsoLargeWindowSingleElectronPixelMatchFilter &
-			      doLocalStrip & // strip rechit for the electron tracking
                               pixelMatchElectronL1IsoLargeWindowTrackingSequenceForHLT &
 	                     hltL1IsoLargeWindowSingleElectronHOneOEMinusOneOPFilter &
                               l1IsoLargeWindowElectronsRegionalRecoTracker & //// here the regional is obtained by

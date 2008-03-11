@@ -111,11 +111,11 @@ replace  hltL1NonIsoDoubleElectronTrackIsolFilter.doIsolated = false
 
                   ##### trackerlocalreco &         
 	                   &   doLocalPixel   
+                           & doLocalStrip
 	                   & pixelMatchElectronL1IsoSequenceForHLT
 	                   & pixelMatchElectronL1NonIsoSequenceForHLT
 
                            & hltL1NonIsoDoubleElectronPixelMatchFilter
-                           & doLocalStrip
                            & pixelMatchElectronL1IsoTrackingSequenceForHLT
                            & pixelMatchElectronL1NonIsoTrackingSequenceForHLT
                            & hltL1NonIsoDoubleElectronEoverpFilter
