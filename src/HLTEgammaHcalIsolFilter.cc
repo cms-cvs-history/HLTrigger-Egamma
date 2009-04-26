@@ -1,6 +1,6 @@
 /** \class HLTEgammaHcalIsolFilter
  *
- * $Id: HLTEgammaHcalIsolFilter.cc,v 1.12 2008/09/09 16:22:32 ghezzi Exp $
+ * $Id: HLTEgammaHcalIsolFilter.cc,v 1.13 2008/09/10 12:37:54 ghezzi Exp $
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -53,8 +53,8 @@ HLTEgammaHcalIsolFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetu
    // The filter object
   using namespace trigger;
     std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-    if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+    if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   // Ref to Candidate object to be recorded in filter object
    edm::Ref<reco::RecoEcalCandidateCollection> ref;
 

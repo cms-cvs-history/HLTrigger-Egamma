@@ -46,8 +46,8 @@ HLTPMMassFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
   // The filter object
   using namespace trigger;
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-  if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+  if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   
   iSetup.get<IdealMagneticFieldRecord>().get(theMagField);
 

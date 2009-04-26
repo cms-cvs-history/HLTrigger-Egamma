@@ -1,6 +1,6 @@
 /** \class HLTEgammaGenericFilter
  *
- * $Id: HLTEgammaGenericFilter.cc,v 1.9 2009/01/20 11:30:38 covarell Exp $
+ * $Id: HLTEgammaGenericFilter.cc,v 1.1 2009/01/28 15:06:02 covarell Exp $
  *
  *  \author Roberto Covarelli (CERN)
  *
@@ -57,8 +57,8 @@ HLTEgammaGenericFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup
 {
   using namespace trigger;
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
 
   // Ref to Candidate object to be recorded in filter object
   edm::Ref<reco::RecoEcalCandidateCollection> ref;

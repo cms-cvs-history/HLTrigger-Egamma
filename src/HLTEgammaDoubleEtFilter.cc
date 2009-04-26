@@ -1,6 +1,6 @@
 /** \class HLTEgammaDoubleEtFilter
  *
- * $Id: HLTEgammaDoubleEtFilter.cc,v 1.6 2008/04/23 15:30:44 ghezzi Exp $
+ * $Id: HLTEgammaDoubleEtFilter.cc,v 1.7 2008/05/06 13:58:06 ghezzi Exp $
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -49,8 +49,8 @@ HLTEgammaDoubleEtFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetu
     // The filter object
   using namespace trigger;
     std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-    if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+    if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   // Ref to Candidate object to be recorded in filter object
    edm::Handle<trigger::TriggerFilterObjectWithRefs> PrevFilterOutput;
 

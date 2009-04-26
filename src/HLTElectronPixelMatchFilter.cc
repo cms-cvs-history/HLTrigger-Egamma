@@ -1,6 +1,6 @@
 /** \class HLTElectronPixelMatchFilter
  *
- * $Id: HLTElectronPixelMatchFilter.cc,v 1.10 2007/12/07 14:41:33 ghezzi Exp $
+ * $Id: HLTElectronPixelMatchFilter.cc,v 1.11 2008/04/22 17:01:17 ghezzi Exp $
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -62,8 +62,8 @@ HLTElectronPixelMatchFilter::filter(edm::Event& iEvent, const edm::EventSetup& i
   // The filter object
   using namespace trigger;
     std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-    if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+    if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   // Ref to Candidate object to be recorded in filter object
    edm::Ref<reco::RecoEcalCandidateCollection> ref;
 

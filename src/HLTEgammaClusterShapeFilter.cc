@@ -1,6 +1,6 @@
 /** \class HLTEgammaClusterShapeFilter
  *
- * $Id: HLTEgammaClusterShapeFilter.cc,v 1.2 2009/01/15 14:31:49 covarell Exp $
+ * $Id: HLTEgammaClusterShapeFilter.cc,v 1.3 2009/02/04 11:00:37 covarell Exp $
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -54,8 +54,8 @@ HLTEgammaClusterShapeFilter::filter(edm::Event& iEvent, const edm::EventSetup& i
   using namespace trigger;
   using namespace edm;
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   
   // Ref to Candidate object to be recorded in filter object
   edm::Ref<reco::RecoEcalCandidateCollection> ref;

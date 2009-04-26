@@ -1,6 +1,6 @@
 /** \class HLTEgammaEtFilterPairs
  *
- * $Id: HLTEgammaEtFilterPairs.cc,v 1.1 2008/10/14 14:52:57 ghezzi Exp $
+ * $Id: HLTEgammaEtFilterPairs.cc,v 1.2 2009/01/27 13:57:07 ghezzi Exp $
  *
  *  \author Alessio Ghezzi
  *
@@ -45,8 +45,8 @@ HLTEgammaEtFilterPairs::filter(edm::Event& iEvent, const edm::EventSetup& iSetup
   using namespace trigger;
   // The filter object
     std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-    if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+    if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
 
   edm::Handle<trigger::TriggerFilterObjectWithRefs> PrevFilterOutput;
   iEvent.getByLabel (inputTag_,PrevFilterOutput);

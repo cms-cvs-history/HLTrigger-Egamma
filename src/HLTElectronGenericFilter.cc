@@ -1,6 +1,6 @@
 /** \class HLTElectronGenericFilter
  *
- * $Id: HLTElectronGenericFilter.cc,v 1.9 2009/01/20 11:30:38 covarell Exp $
+ * $Id: HLTElectronGenericFilter.cc,v 1.1 2009/01/28 15:06:02 covarell Exp $
  *
  *  \author Roberto Covarelli (CERN)
  *
@@ -59,8 +59,8 @@ HLTElectronGenericFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSet
 {
   using namespace trigger;
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
 
   // Ref to Candidate object to be recorded in filter object
   reco::ElectronRef ref;

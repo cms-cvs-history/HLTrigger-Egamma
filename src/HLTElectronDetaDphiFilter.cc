@@ -1,6 +1,6 @@
 /** \class HLTElectronDetaDphiFilter
  *
- * $Id: HLTElectronDetaDphiFilter.cc,v 1.7 2009/01/15 14:31:49 covarell Exp $ 
+ * $Id: HLTElectronDetaDphiFilter.cc,v 1.8 2009/01/28 15:06:02 covarell Exp $ 
  *
  *  \author Alessio Ghezzi (Milano-Bicocca & CERN)
  *
@@ -56,8 +56,8 @@ HLTElectronDetaDphiFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSe
  // The filter object
   using namespace trigger;
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-  if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+  if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+  if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   // Ref to Candidate object to be recorded in filter object
   edm::Ref<reco::ElectronCollection> ref;
 

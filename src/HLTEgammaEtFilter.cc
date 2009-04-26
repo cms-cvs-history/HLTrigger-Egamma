@@ -1,6 +1,6 @@
 /** \class HLTEgammaEtFilter
  *
- * $Id: HLTEgammaEtFilter.cc,v 1.9 2009/01/15 14:31:49 covarell Exp $
+ * $Id: HLTEgammaEtFilter.cc,v 1.10 2009/01/27 13:57:07 ghezzi Exp $
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -44,8 +44,8 @@ HLTEgammaEtFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
   using namespace trigger;
   // The filter object
     std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-    if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+    if( store_ && relaxed_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
 
   // Ref to Candidate object to be recorded in filter object
    edm::Ref<reco::RecoEcalCandidateCollection> ref;

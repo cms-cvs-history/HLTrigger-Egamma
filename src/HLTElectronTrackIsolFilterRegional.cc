@@ -1,6 +1,6 @@
 /** \class HLTElectronTrackIsolFilterRegional
  *
- * $Id: HLTElectronTrackIsolFilterRegional.cc,v 1.7 2008/11/03 14:43:27 ghezzi Exp $ 
+ * $Id: HLTElectronTrackIsolFilterRegional.cc,v 1.8 2009/01/20 11:30:38 covarell Exp $ 
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -54,8 +54,8 @@ HLTElectronTrackIsolFilterRegional::filter(edm::Event& iEvent, const edm::EventS
  // The filter object
   using namespace trigger;
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> filterproduct (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_);}
-  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_);}
+    if( store_ ){filterproduct->addCollectionTag(L1IsoCollTag_, static_cast<const HLTFilter &> (*this));}
+  if( store_ && !doIsolated_){filterproduct->addCollectionTag(L1NonIsoCollTag_, static_cast<const HLTFilter &> (*this));}
   // Ref to Candidate object to be recorded in filter object
   edm::Ref<reco::ElectronCollection> ref;
 
