@@ -27,7 +27,6 @@
 #include "HLTrigger/Egamma/interface/HLTElectronEtFilter.h"
 #include "HLTrigger/Egamma/interface/HLTEgammaDoubleEtDeltaPhiFilter.h"
 #include "HLTrigger/Egamma/interface/HLTEgammaDoubleLegCombFilter.h"
-#include "HLTrigger/Egamma/interface/HLTEgammaCombMassFilter.h"
 
 
 DEFINE_FWK_MODULE(HLTEgammaGenericFilter);
@@ -54,4 +53,3 @@ DEFINE_FWK_MODULE(HLTEgammaTriggerFilterObjectWrapper);
 DEFINE_FWK_MODULE(HLTElectronEtFilter);
 DEFINE_FWK_MODULE(HLTEgammaDoubleEtDeltaPhiFilter);
 DEFINE_FWK_MODULE(HLTEgammaDoubleLegCombFilter);
-DEFINE_FWK_MODULE(HLTEgammaCombMassFilter);
